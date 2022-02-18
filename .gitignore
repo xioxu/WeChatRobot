@@ -1,3 +1,6 @@
 /.vs
 /Debug
 /Release
+/WeChatRobot/Release
+/WeChatRobot/x64
+/WeChatRobot/Debug
