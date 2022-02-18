@@ -2,8 +2,8 @@
 #include "CAutoFunction.h"
 #include "Function.h"
 #include <atlconv.h>
-#include <direct.h> //_mkdirº¯ÊıµÄÍ·ÎÄ¼ş
-#include <io.h>     //_accessº¯ÊıµÄÍ·ÎÄ¼ş
+#include <direct.h> //_mkdirå‡½æ•°çš„å¤´æ–‡ä»¶
+#include <io.h>     //_accesså‡½æ•°çš„å¤´æ–‡ä»¶
 #include <iostream>
 #include <cstdio>
 #include <ctime>
@@ -16,19 +16,19 @@
 #pragma comment(lib,"Wininet.lib")
 
 
-//-----------------------------------------------±£´æ±íÇé-------------------------------------------------
+//-----------------------------------------------ä¿å­˜è¡¨æƒ…-------------------------------------------------
 BYTE bjmpcode[5] = { 0 };
-DWORD dwReternAddress = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxGetExpressionsAddr + 5;	//·µ»ØµØÖ·
+DWORD dwReternAddress = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxGetExpressionsAddr + 5;	//è¿”å›åœ°å€
 DWORD dwCallAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxGetExpressionsCallAddr;
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: AgreeUserRequest
-// º¯ÊıËµÃ÷: Í¬ÒâºÃÓÑÇëÇó
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/17
-// ²Î    Êı: v1 v2
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: AgreeUserRequest
+// å‡½æ•°è¯´æ˜: åŒæ„å¥½å‹è¯·æ±‚
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/17
+// å‚    æ•°: v1 v2
+// è¿” å› å€¼: void
 //************************************************************
 void AgreeUserRequest(wchar_t* v1, wchar_t* v2)
 {
@@ -82,12 +82,12 @@ void AgreeUserRequest(wchar_t* v1, wchar_t* v2)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: AutoAgreeUserRequest
-// º¯ÊıËµÃ÷: ×Ô¶¯Í¬ÒâºÃÓÑÇëÇó
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/17
-// ²Î    Êı: msg ÏûÏ¢ÄÚÈİ
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: AutoAgreeUserRequest
+// å‡½æ•°è¯´æ˜: è‡ªåŠ¨åŒæ„å¥½å‹è¯·æ±‚
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/17
+// å‚    æ•°: msg æ¶ˆæ¯å†…å®¹
+// è¿” å› å€¼: void
 //************************************************************
 void AutoAgreeUserRequest(wstring msg)
 {
@@ -95,24 +95,24 @@ void AutoAgreeUserRequest(wstring msg)
 	int v1end = msg.find(L"@stranger");
 	wstring v1;
 	v1 = msg.substr(v1strat, v1end - v1strat + 9);
-	//ÕÒµ½v2
+	//æ‰¾åˆ°v2
 	int v2strat = msg.find(L"v4_");
 	int v2end = msg.rfind(L"@stranger");
 	wstring v2;
 	v2 = msg.substr(v2strat, v2end - v2strat + 9);
 
-	//µ÷ÓÃÍ¬ÒâºÃÓÑÇëÇóµÄcall
+	//è°ƒç”¨åŒæ„å¥½å‹è¯·æ±‚çš„call
 	AgreeUserRequest((wchar_t*)v1.c_str(), (wchar_t*)v2.c_str());
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: CllectMoney
-// º¯ÊıËµÃ÷: ÊÕ¿î
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/15
-// ²Î    Êı: transferid ×ªÕËID wxid Î¢ĞÅID
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: CllectMoney
+// å‡½æ•°è¯´æ˜: æ”¶æ¬¾
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/15
+// å‚    æ•°: transferid è½¬è´¦ID wxid å¾®ä¿¡ID
+// è¿” å› å€¼: void 
 //************************************************************
 void CllectMoney(wchar_t* transferid, wchar_t* wxid)
 {
@@ -144,38 +144,38 @@ void CllectMoney(wchar_t* transferid, wchar_t* wxid)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: AutoCllectMoney
-// º¯ÊıËµÃ÷: ×Ô¶¯ÊÕ¿î
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/17
-// ²Î    Êı: msg ÏûÏ¢ÄÚÈİ
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: AutoCllectMoney
+// å‡½æ•°è¯´æ˜: è‡ªåŠ¨æ”¶æ¬¾
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/17
+// å‚    æ•°: msg æ¶ˆæ¯å†…å®¹
+// è¿” å› å€¼: void
 //************************************************************
 void AutoCllectMoney(wstring msg,wchar_t* wxid)
 {
-	// ÕÒµ½<transferid>×Ö·û´®µÄÎ»ÖÃ
+	// æ‰¾åˆ°<transferid>å­—ç¬¦ä¸²çš„ä½ç½®
 	int pos1 = msg.find(L"<transferid>");
-	//ÕÒµ½]]></transferid>×Ö·û´®µÄÎ»ÖÃ
+	//æ‰¾åˆ°]]></transferid>å­—ç¬¦ä¸²çš„ä½ç½®
 	int pos2 = msg.find(L"]]></transferid>");
-	//È¡³ö¶àÓàµÄ×Ö·û´®³¤¶È
+	//å–å‡ºå¤šä½™çš„å­—ç¬¦ä¸²é•¿åº¦
 	wstring noneed = L"<transferid><![CDATA[";
 	int noneedLen = noneed.length();
-	//È¡³ö×ªÕËID
+	//å–å‡ºè½¬è´¦ID
 	wstring transferid;
 	transferid = msg.substr(pos1 + noneedLen, (pos2 - pos1) - noneedLen);
 
-	//µ÷ÓÃÊÕ¿îcall ÊµÏÖ×Ô¶¯ÊÕ¿î
+	//è°ƒç”¨æ”¶æ¬¾call å®ç°è‡ªåŠ¨æ”¶æ¬¾
 	CllectMoney((wchar_t*)transferid.c_str(), wxid);
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: AddCardUser
-// º¯ÊıËµÃ÷: Ìí¼ÓÃûÆ¬ºÃÓÑ
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/18
-// ²Î    Êı: v1 msg ÏûÏ¢ÄÚÈİ
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: AddCardUser
+// å‡½æ•°è¯´æ˜: æ·»åŠ åç‰‡å¥½å‹
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/18
+// å‚    æ•°: v1 msg æ¶ˆæ¯å†…å®¹
+// è¿” å› å€¼: void
 //************************************************************
 void AddCardUser(wchar_t* v1, wchar_t* msg)
 {
@@ -223,33 +223,33 @@ void AddCardUser(wchar_t* v1, wchar_t* msg)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: AutoAddCardUser
-// º¯ÊıËµÃ÷: ×Ô¶¯Ìí¼ÓÃûÆ¬ºÃÓÑ
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/18
-// ²Î    Êı: msg ÏûÏ¢ÄÚÈİ
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: AutoAddCardUser
+// å‡½æ•°è¯´æ˜: è‡ªåŠ¨æ·»åŠ åç‰‡å¥½å‹
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/18
+// å‚    æ•°: msg æ¶ˆæ¯å†…å®¹
+// è¿” å› å€¼: void
 //************************************************************
 void AutoAddCardUser(wstring msg)
 {
-	//ÄÃµ½V1
+	//æ‹¿åˆ°V1
 	int v1strat = msg.find(L"v1_");
 	int v1end = msg.find(L"@stranger");
 	wstring v1;
 	v1 = msg.substr(v1strat, v1end - v1strat + 9);
 
-	//µ÷ÓÃÌí¼ÓÃûÆ¬ºÃÓÑº¯Êı
-	AddCardUser((wchar_t*)v1.c_str(), (wchar_t*)L"¿ìÍ¨¹ı~¿ìÍ¨¹ı~ ºğºğ£¡");
+	//è°ƒç”¨æ·»åŠ åç‰‡å¥½å‹å‡½æ•°
+	AddCardUser((wchar_t*)v1.c_str(), (wchar_t*)L"å¿«é€šè¿‡~å¿«é€šè¿‡~ å¼å¼ï¼");
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: HookExtractExpression
-// º¯ÊıËµÃ÷: HOOKÌáÈ¡±íÇéCall
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/21
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: HookExtractExpression
+// å‡½æ•°è¯´æ˜: HOOKæå–è¡¨æƒ…Call
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/21
+// å‚    æ•°: void
+// è¿” å› å€¼: void
 //************************************************************
 void HookExtractExpression()
 {
@@ -259,12 +259,12 @@ void HookExtractExpression()
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: ExtractExpression
-// º¯ÊıËµÃ÷: ÌáÈ¡±íÇé
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/21
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: ExtractExpression
+// å‡½æ•°è¯´æ˜: æå–è¡¨æƒ…
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/21
+// å‚    æ•°: void
+// è¿” å› å€¼: void
 //************************************************************
 void  __declspec(naked) ExtractExpression()
 {
@@ -274,32 +274,32 @@ void  __declspec(naked) ExtractExpression()
 		push eax;
 		call OutputExpression;
 		popad;
-		//»Ö¸´±»¸²¸ÇµÄ´úÂë
+		//æ¢å¤è¢«è¦†ç›–çš„ä»£ç 
 		call dwCallAddr;
-		//Ìø»Ø·µ»ØµØÖ·
+		//è·³å›è¿”å›åœ°å€
 		jmp dwReternAddress;
 	}
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: OutputExpression
-// º¯ÊıËµÃ÷: Êä³ö±íÇé
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/21
-// ²Î    Êı: dwExpressionAddr µØÖ·
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: OutputExpression
+// å‡½æ•°è¯´æ˜: è¾“å‡ºè¡¨æƒ…
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/21
+// å‚    æ•°: dwExpressionAddr åœ°å€
+// è¿” å› å€¼: void
 //************************************************************
 void __stdcall OutputExpression(DWORD dwExpressionAddr)
 {
-	//È¡³öÍ¼Æ¬³¤¶È
+	//å–å‡ºå›¾ç‰‡é•¿åº¦
 	DWORD dwImageLen = *((DWORD*)(dwExpressionAddr + 4));
-	//È¡³öÍ¼Æ¬ÄÚÈİ
+	//å–å‡ºå›¾ç‰‡å†…å®¹
 	DWORD dwImage = *((DWORD*)(dwExpressionAddr));
 	unsigned char magic_head[4] = { 0 };
 	char postfix[5] = { 0 };
 	memcpy(magic_head, (void*)dwImage, 3);
-	//¸ù¾İMAGICÍ·ÅĞ¶Ïºó×º
+	//æ ¹æ®MAGICå¤´åˆ¤æ–­åç¼€
 	if (magic_head[0] == 137 && magic_head[1] == 80 && magic_head[2] == 78)
 	{
 		strcpy_s(postfix, 5, ".png");
@@ -313,18 +313,18 @@ void __stdcall OutputExpression(DWORD dwExpressionAddr)
 		strcpy_s(postfix, 5, ".jpg");
 	}
 
-	//»ñÈ¡ÁÙÊ±ÎÄ¼ş¼ĞÄ¿Â¼
+	//è·å–ä¸´æ—¶æ–‡ä»¶å¤¹ç›®å½•
 	char temppath[MAX_PATH] = { 0 };
 	GetTempPathA(MAX_PATH, temppath);
 	char imagedir[25] = { "WeChatRecordExpressions" };
 
-	//Æ´½Ó´æ·ÅÎ¢ĞÅ±íÇéµÄÄ¿Â¼
+	//æ‹¼æ¥å­˜æ”¾å¾®ä¿¡è¡¨æƒ…çš„ç›®å½•
 	char WeChatExpressionsPath[MAX_PATH] = { 0 };
 	sprintf_s(WeChatExpressionsPath, "%s%s\\", temppath, imagedir);
-	//´´½¨Ä¿Â¼´æ·ÅÍ¼Æ¬
+	//åˆ›å»ºç›®å½•å­˜æ”¾å›¾ç‰‡
 	CreateDir(WeChatExpressionsPath);
 
-	//±£´æ±íÇéÍ¼Æ¬
+	//ä¿å­˜è¡¨æƒ…å›¾ç‰‡
 	CreateFileWithCurrentTime(WeChatExpressionsPath, postfix, dwImage, dwImageLen);
 }
 
@@ -334,16 +334,16 @@ void __stdcall OutputExpression(DWORD dwExpressionAddr)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: CreateFileWithCurrentTime
-// º¯ÊıËµÃ÷: ¸ù¾İµ±Ç°Ê±¼ä´´½¨ÎÄ¼ş
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/9/24
-// ²Î    Êı: filedir ÎÄ¼şÄ¿Â¼ filepostfixÎÄ¼şºó×º filedata ÎÄ¼ş¿ªÊ¼µØÖ· filedatalenÎÄ¼ş ³¤¶È
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: CreateFileWithCurrentTime
+// å‡½æ•°è¯´æ˜: æ ¹æ®å½“å‰æ—¶é—´åˆ›å»ºæ–‡ä»¶
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/9/24
+// å‚    æ•°: filedir æ–‡ä»¶ç›®å½• filepostfixæ–‡ä»¶åç¼€ filedata æ–‡ä»¶å¼€å§‹åœ°å€ filedatalenæ–‡ä»¶ é•¿åº¦
+// è¿” å› å€¼: void 
 //************************************************************
 void CreateFileWithCurrentTime(char* filedir, char* filepostfix, DWORD filedata, DWORD filedatalen)
 {
-	//»ñÈ¡µ±Ç°Ê±¼ä×÷ÎªÎÄ¼şÃû
+	//è·å–å½“å‰æ—¶é—´ä½œä¸ºæ–‡ä»¶å
 	time_t rawtime;
 	struct tm *ptminfo = new struct tm;
 	time(&rawtime);
@@ -352,31 +352,31 @@ void CreateFileWithCurrentTime(char* filedir, char* filepostfix, DWORD filedata,
 	sprintf_s(currenttime, "%02d%02d%02d%02d%02d%02d", ptminfo->tm_year + 1900,
 		ptminfo->tm_mon + 1, ptminfo->tm_mday, ptminfo->tm_hour, ptminfo->tm_min, ptminfo->tm_sec);
 
-	//Æ´½ÓÍêÕûµÄÂ·¾¶
+	//æ‹¼æ¥å®Œæ•´çš„è·¯å¾„
 	char filepath[MAX_PATH] = { 0 };
 	sprintf_s(filepath, "%s%s%s", filedir, currenttime, filepostfix);
-	//´´½¨ÎÄ¼ş
+	//åˆ›å»ºæ–‡ä»¶
 	HANDLE hFile = CreateFileA(filepath, GENERIC_ALL, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hFile == INVALID_HANDLE_VALUE)
 	{
-		MessageBoxA(NULL, "´´½¨ÎÄ¼şÊ§°Ü", "´íÎó", 0);
+		MessageBoxA(NULL, "åˆ›å»ºæ–‡ä»¶å¤±è´¥", "é”™è¯¯", 0);  
 		return;
 	}
-	//Ğ´ÈëÎÄ¼ş
+	//å†™å…¥æ–‡ä»¶
 	DWORD dwWrite = 0;
 	WriteFile(hFile, (LPCVOID)filedata, filedatalen, &dwWrite, 0);
-	//¹Ø±Õ¾ä±ú
+	//å…³é—­å¥æŸ„
 	CloseHandle(hFile);
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: CreateDir
-// º¯ÊıËµÃ÷: ´´½¨Ä¿Â¼
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/21
-// ²Î    Êı: dir Ä¿Â¼
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: CreateDir
+// å‡½æ•°è¯´æ˜: åˆ›å»ºç›®å½•
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/21
+// å‚    æ•°: dir ç›®å½•
+// è¿” å› å€¼: void
 //************************************************************
 void CreateDir(const char *dir)
 {
@@ -391,10 +391,10 @@ void CreateDir(const char *dir)
 	{
 		m = str1.find('\\');
 		str2 += '\\' + str1.substr(0, m);
-		n = _access(str2.c_str(), 0); //ÅĞ¶Ï¸ÃÄ¿Â¼ÊÇ·ñ´æÔÚ
+		n = _access(str2.c_str(), 0); //åˆ¤æ–­è¯¥ç›®å½•æ˜¯å¦å­˜åœ¨
 		if (n == -1)
 		{
-			_mkdir(str2.c_str());     //´´½¨Ä¿Â¼
+			_mkdir(str2.c_str());     //åˆ›å»ºç›®å½•
 		}
 		str1 = str1.substr(m + 1, str1.size());
 	}
@@ -403,19 +403,19 @@ void CreateDir(const char *dir)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: GetXmlContent
-// º¯ÊıËµÃ÷: »ñÈ¡ĞèÒªµÄXMLÄÚÈİ
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/11/15
-// ²Î    Êı: fullxmlcontent ÍêÕûµÄXMLÄÚÈİ  str1 ĞèÒª»ñÈ¡µÄXMLÄÚÈİ×ó±ßµÄ×Ö·û´® str2 ĞèÒª»ñÈ¡µÄXMLÄÚÈİÓÒ±ßµÄ×Ö·û´®
-// ·µ »Ø Öµ: wstring ĞèÒª»ñÈ¡µÄXMLÄÚÈİ
+// å‡½æ•°åç§°: GetXmlContent
+// å‡½æ•°è¯´æ˜: è·å–éœ€è¦çš„XMLå†…å®¹
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/11/15
+// å‚    æ•°: fullxmlcontent å®Œæ•´çš„XMLå†…å®¹  str1 éœ€è¦è·å–çš„XMLå†…å®¹å·¦è¾¹çš„å­—ç¬¦ä¸² str2 éœ€è¦è·å–çš„XMLå†…å®¹å³è¾¹çš„å­—ç¬¦ä¸²
+// è¿” å› å€¼: wstring éœ€è¦è·å–çš„XMLå†…å®¹
 //************************************************************
 wstring GetXmlContent(wstring fullxmlcontent, wstring str1, wstring str2)
 {
 	wstring targetstring;
-	// ÕÒµ½<title>×Ö·û´®µÄÎ»ÖÃ
+	// æ‰¾åˆ°<title>å­—ç¬¦ä¸²çš„ä½ç½®
 	int pos1 = fullxmlcontent.find(str1);
-	//ÕÒµ½</title>×Ö·û´®µÄÎ»ÖÃ
+	//æ‰¾åˆ°</title>å­—ç¬¦ä¸²çš„ä½ç½®
 	int pos2 = fullxmlcontent.find(str2);
 
 	if (pos1==wstring::npos|| pos2== wstring::npos)
@@ -423,7 +423,7 @@ wstring GetXmlContent(wstring fullxmlcontent, wstring str1, wstring str2)
 		return L"NULL";
 	}
 
-	//È¡³ö¶àÓàµÄ×Ö·û´®³¤¶È
+	//å–å‡ºå¤šä½™çš„å­—ç¬¦ä¸²é•¿åº¦
 	wstring noneedString1 = str1;
 	int noneedLen1 = noneedString1.length();
 	targetstring = fullxmlcontent.substr(pos1 + noneedLen1, pos2 - pos1 - noneedLen1);

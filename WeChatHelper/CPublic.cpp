@@ -1,45 +1,51 @@
 #include "stdafx.h"
 #include "CPublic.h"
+#include "easywsclient.hpp"
+#include "json/json.h"
+#include <codecvt>
+#include <Windows.h>
 
+#define WS_SVR_ADDR "ws://192.168.2.101:8126/foo"
+easywsclient::WebSocket::pointer p_ws = NULL;
 
 //************************************************************
-// º¯ÊýÃû³Æ: HookAnyAddress
-// º¯ÊýËµÃ÷: HookÈÎÒâµØÖ·
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/11/13
-// ²Î    Êý: dwHookAddr ÐèÒªHOOKµÄµØÖ· dwJmpAddressÌø×ªµÄµØÖ· dwBackAddress ·µ»ØµÄµØÖ·
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: HookAnyAddress
+// å‡½æ•°è¯´æ˜Ž: Hookä»»æ„åœ°å€
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/11/13
+// å‚    æ•°: dwHookAddr éœ€è¦HOOKçš„åœ°å€ dwJmpAddressè·³è½¬çš„åœ°å€ dwBackAddress è¿”å›žçš„åœ°å€
+// è¿” å›ž å€¼: void 
 //************************************************************
 void HookAnyAddress(DWORD dwHookAddr, LPVOID dwJmpAddress)
 {
-	//×é×°Ìø×ªÊý¾Ý
+	//ç»„è£…è·³è½¬æ•°æ®
 	BYTE jmpCode[5] = { 0 };
 	jmpCode[0] = 0xE9;
 
-	//¼ÆËãÆ«ÒÆ
+	//è®¡ç®—åç§»
 	*(DWORD*)& jmpCode[1] = (DWORD)dwJmpAddress - dwHookAddr - 5;
 
-	// ±£´æÒÔÇ°µÄÊôÐÔÓÃÓÚ»¹Ô­
+	// ä¿å­˜ä»¥å‰çš„å±žæ€§ç”¨äºŽè¿˜åŽŸ
 	DWORD OldProtext = 0;
 
-	// ÒòÎªÒªÍù´úÂë¶ÎÐ´ÈëÊý¾Ý£¬ÓÖÒòÎª´úÂë¶ÎÊÇ²»¿ÉÐ´µÄ£¬ËùÒÔÐèÒªÐÞ¸ÄÊôÐÔ
+	// å› ä¸ºè¦å¾€ä»£ç æ®µå†™å…¥æ•°æ®ï¼Œåˆå› ä¸ºä»£ç æ®µæ˜¯ä¸å¯å†™çš„ï¼Œæ‰€ä»¥éœ€è¦ä¿®æ”¹å±žæ€§
 	VirtualProtect((LPVOID)dwHookAddr, 5, PAGE_EXECUTE_READWRITE, &OldProtext);
 
-	//Ð´Èë×Ô¼ºµÄ´úÂë
+	//å†™å…¥è‡ªå·±çš„ä»£ç 
 	memcpy((void*)dwHookAddr, jmpCode, 5);
 
-	// Ö´ÐÐÍêÁË²Ù×÷Ö®ºóÐèÒª½øÐÐ»¹Ô­
+	// æ‰§è¡Œå®Œäº†æ“ä½œä¹‹åŽéœ€è¦è¿›è¡Œè¿˜åŽŸ
 	VirtualProtect((LPVOID)dwHookAddr, 5, OldProtext, &OldProtext);
 }
 
 
 //************************************************************
-// º¯ÊýÃû³Æ: GetWeChatWinBase
-// º¯ÊýËµÃ÷: »ñÈ¡WeChatWin»ùÖ·
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/11/13
-// ²Î    Êý: void
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: GetWeChatWinBase
+// å‡½æ•°è¯´æ˜Ž: èŽ·å–WeChatWinåŸºå€
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/11/13
+// å‚    æ•°: void
+// è¿” å›ž å€¼: void 
 //************************************************************
 DWORD GetWeChatWinBase()
 {
@@ -49,12 +55,12 @@ DWORD GetWeChatWinBase()
 
 
 //************************************************************
-// º¯ÊýÃû³Æ: UTF8ToUnicode
-// º¯ÊýËµÃ÷: ½«UTF8±àÂë×ªÎªUnicode(Î¢ÐÅÄ¬ÈÏ±àÂëÎªUTF8)
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/7
-// ²Î    Êý: str ÐèÒª×ª»»µÄ×Ö·û´®
-// ·µ »Ø Öµ: wchar_t ·µ»ØµÄ×Ö·û´® 
+// å‡½æ•°åç§°: UTF8ToUnicode
+// å‡½æ•°è¯´æ˜Ž: å°†UTF8ç¼–ç è½¬ä¸ºUnicode(å¾®ä¿¡é»˜è®¤ç¼–ç ä¸ºUTF8)
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/7
+// å‚    æ•°: str éœ€è¦è½¬æ¢çš„å­—ç¬¦ä¸²
+// è¿” å›ž å€¼: wchar_t è¿”å›žçš„å­—ç¬¦ä¸² 
 //************************************************************
 wchar_t * UTF8ToUnicode(const char* str)
 {
@@ -85,10 +91,77 @@ wstring UTF8ToUnicode2(const char* str)
 	return tempstr;
 }
 
+char* UnicodeToUtf8(const wchar_t* wstr)
+{
+	int    textlen = 0;
+	char* result;
+	textlen = WideCharToMultiByte(CP_ACP, 0, wstr, -1, NULL, 0, NULL, NULL);
+	result = (char*)malloc((textlen + 1) * sizeof(char));
+	memset(result, 0, (textlen + 1) * sizeof(char));
+	WideCharToMultiByte(CP_ACP, 0, wstr, -1, result, textlen, NULL, NULL);;
+	return    result;
+}
+
+string UnicodeToUtf82(const std::wstring& wstr)
+{
+	if (wstr.empty()) return "";
+	int size_needed = WideCharToMultiByte(CP_UTF8, 0, &wstr[0], (int)wstr.size(), NULL, 0, NULL, NULL);
+	std::string strTo(size_needed, 0);
+	WideCharToMultiByte(CP_UTF8, 0, &wstr[0], (int)wstr.size(), &strTo[0], size_needed, NULL, NULL);
+	return strTo;
+}
+
 
 void DebugCode(LPVOID pAddress)
 {
 	char buff[40] = { 0 };
 	sprintf_s(buff, "%p", pAddress);
-	MessageBoxA(0, buff, "µØÖ·", 0);
+	MessageBoxA(0, buff, "åœ°å€", 0);
+}
+
+void handle_message(const std::string& message)
+{
+	OutputDebugStringW(UTF8ToUnicode(message.c_str()));
+
+	Json::Reader reader;
+	Json::Value root;
+
+	if (reader.parse(message, root)) {
+		std::string wxSendTo = root["sendTo"].asString();
+		std::string wxmsg = root["msg"].asString();
+
+		wchar_t* st = UTF8ToUnicode(wxSendTo.c_str());
+		wchar_t* mg = UTF8ToUnicode(wxmsg.c_str());
+		//SendTextMessage(st, mg);
+		
+	}
+}
+
+//****************
+// å¯åŠ¨WSé€šä¿¡çº¿ç¨‹ï¼Œè¿”å›žWSé€šä¿¡å¯¹è±¡ç”¨ä»¥å‘é€ä¿¡æ¯ï¼ŒåŒæ—¶æŽ¥å—æœåŠ¡ç«¯WSè¿”å›žä¿¡æ¯è¿›è¡Œå¤„ç†
+//****************
+void StartWsComm(LPVOID Context) {
+	OutputDebugStringA("Begin to handl WS response");
+	easywsclient::WebSocket::pointer pWs = (easywsclient::WebSocket::pointer)Context;
+
+	while (pWs->getReadyState() != easywsclient::WebSocket::CLOSED) {
+		pWs->poll();//è¿™ä¸ªå‡½æ•°ä¸€å®šè¦åœ¨å¾ªçŽ¯é‡Œè°ƒç”¨ï¼Œå‘é€å’ŒæŽ¥æ”¶éƒ½æ˜¯åŸºäºŽè¿™ä¸ªå‡½æ•°è¿›è¡Œå¼‚æ­¥å¤„ç†çš„
+		pWs->dispatch(handle_message);
+	}
+	delete p_ws;
+}
+
+void ConnWS() {
+	p_ws = easywsclient::WebSocket::from_url(WS_SVR_ADDR);
+	if (p_ws == NULL) {
+		OutputDebugStringA("Connect WS faild");
+	}
+	else {
+		OutputDebugStringA("Connect WS successful");
+
+		OutputDebugStringA("Begin create thread to handle BG WS response");
+		HANDLE wsThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartWsComm, p_ws, 0, NULL);
+		CloseHandle(wsThread);
+
+	}
 }

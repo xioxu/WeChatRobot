@@ -1,1 +1,577 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution".
+﻿  stdafx.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\data.h(15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  CAutoFunction.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(21): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(21): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(22): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(22): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(42): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(46): warning C4311: 'type cast': pointer truncation from 'char (*)[588]' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(46): warning C4302: 'type cast': truncation from 'char (*)[588]' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(49): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(51): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(52): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(59): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(61): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(61): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(61): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(62): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(62): error C2143: syntax error: missing ';' before 'constant'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(63): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(63): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(63): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(64): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(64): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(64): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(65): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(65): error C2146: syntax error: missing ';' before identifier 'callAdd1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(66): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(66): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(66): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(67): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(67): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(67): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(68): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(68): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(68): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(69): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(69): error C2146: syntax error: missing ';' before identifier 'callAdd2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(70): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(70): error C2146: syntax error: missing ';' before identifier 'esi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(70): error C2065: 'esi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(70): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(71): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(71): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(71): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(72): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(72): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(72): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(73): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(73): error C2146: syntax error: missing ';' before identifier 'callAdd3'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(74): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(74): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(74): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(75): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(75): error C2146: syntax error: missing ';' before identifier 'edx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(75): error C2065: 'edx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(75): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(76): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(76): error C2146: syntax error: missing ';' before identifier 'edx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(76): error C2065: 'edx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(77): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(77): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(77): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(78): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(78): error C2146: syntax error: missing ';' before identifier 'esi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(78): error C2065: 'esi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(79): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(79): error C2146: syntax error: missing ';' before identifier 'callAdd4'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(94): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(95): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(99): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(100): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(121): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(122): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(124): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(125): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(129): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(129): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(133): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(135): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(135): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(135): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(136): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(136): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(136): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(136): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(137): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(137): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(137): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(138): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(138): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(138): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(139): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(139): error C2146: syntax error: missing ';' before identifier 'dwCall1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(140): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(140): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(141): error C2065: 'add': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(141): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(141): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(157): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(159): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(162): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(194): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(196): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(196): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(196): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(197): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(197): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(197): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(197): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(198): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(198): error C2146: syntax error: missing ';' before identifier 'dwParam1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(199): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(199): error C2146: syntax error: missing ';' before identifier 'dwCall1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(200): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(200): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(200): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(201): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(201): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(201): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(202): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(202): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(202): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(202): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(203): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(203): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(203): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(204): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(204): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(205): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cautofunction.cpp(205): fatal error C1003: error count exceeds 100; stopping compilation
+  ChatRecord.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(56): error C2485: 'naked': unrecognized extended attribute
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(59): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(61): error C2065: 'pushad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(62): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(62): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(62): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(63): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(63): error C2146: syntax error: missing ';' before identifier 'SendWxMessage'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(63): warning C4551: function call missing argument list
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(64): error C2065: 'popad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(66): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(66): error C2146: syntax error: missing ';' before identifier 'OverReciveMsgCallAddr'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(68): error C2065: 'jmp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(68): error C2146: syntax error: missing ';' before identifier 'RetkReciveMsgAddr'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(411): warning C4312: 'type cast': conversion from 'DWORD' to 'void *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(419): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(422): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(427): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(438): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(443): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(470): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(473): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatrecord.cpp(473): warning C4312: 'type cast': conversion from 'DWORD' to 'WCHAR *' of greater size
+  ChatRoomOperate.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(24): warning C4311: 'type cast': pointer truncation from 'wchar_t *' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(24): warning C4302: 'type cast': truncation from 'wchar_t *' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(25): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(26): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(30): warning C4311: 'type cast': pointer truncation from 'wchar_t *' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(30): warning C4302: 'type cast': truncation from 'wchar_t *' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(31): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(32): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(36): warning C4311: 'type cast': pointer truncation from 'CHAR (*)[208]' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(36): warning C4302: 'type cast': truncation from 'CHAR (*)[208]' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(41): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(44): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(44): error C2146: syntax error: missing ';' before identifier 'r_esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(44): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(45): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(45): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(45): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(46): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(46): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(46): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(47): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(47): error C2146: syntax error: missing ';' before identifier 'callAdrress'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(50): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(50): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(50): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(51): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(51): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(51): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(51): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(74): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(76): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(76): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(76): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(77): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(77): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(77): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(78): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(78): error C2146: syntax error: missing ';' before identifier 'dwCallAddr'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(106): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(107): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(116): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(117): error C2065: 'pushad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(118): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(118): error C2146: syntax error: missing ';' before identifier 'esi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(118): error C2065: 'esi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(119): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(119): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(119): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(119): error C2065: 'esi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(120): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(120): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(120): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(121): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(121): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(121): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(122): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(122): error C2146: syntax error: missing ';' before identifier 'dwCallAddr1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(124): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(124): error C2143: syntax error: missing ';' before 'constant'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(125): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(125): error C2146: syntax error: missing ';' before identifier 'dwParam'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(126): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(126): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(126): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(127): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(127): error C2146: syntax error: missing ';' before identifier 'dwCallAddr2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(129): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(129): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(129): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(130): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(130): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(130): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(131): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(131): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(131): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(131): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(132): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(132): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(132): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(133): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(133): error C2146: syntax error: missing ';' before identifier 'dwCallAddr3'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(135): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(135): error C2146: syntax error: missing ';' before identifier 'esi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(135): error C2065: 'esi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(136): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(136): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(136): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(137): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(137): error C2146: syntax error: missing ';' before identifier 'dwCallAddr4'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(138): error C2065: 'popad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(168): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(170): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(170): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(170): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(171): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(171): error C2146: syntax error: missing ';' before identifier 'dwCall1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(172): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(172): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(172): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(173): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(173): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(173): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(174): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(174): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(174): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(175): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(175): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(175): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(176): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(176): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(177): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(177): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(177): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(177): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(178): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(178): error C2146: syntax error: missing ';' before identifier 'dwCall3'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(179): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\chatroomoperate.cpp(179): fatal error C1003: error count exceeds 100; stopping compilation
+  CPublic.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(20): warning C4311: 'type cast': pointer truncation from 'LPVOID' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(20): warning C4302: 'type cast': truncation from 'LPVOID' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(26): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(29): warning C4312: 'type cast': conversion from 'DWORD' to 'void *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(32): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(46): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\cpublic.cpp(46): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+  dllmain.cpp
+  FriendList.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(51): error C2485: 'naked': unrecognized extended attribute
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(53): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(55): error C2065: 'pushad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(56): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(56): error C2146: syntax error: missing ';' before identifier 'esi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(56): error C2065: 'esi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(57): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(57): error C2146: syntax error: missing ';' before identifier 'SendUserListInfo'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(57): warning C4551: function call missing argument list
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(58): error C2065: 'popad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(61): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(61): error C2146: syntax error: missing ';' before identifier 'overWritedCallAdd'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(64): error C2065: 'jmp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(65): error C2146: syntax error: missing ';' before identifier 'jumBackAddress'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(65): error C2143: syntax error: missing ';' before '}'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(139): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(140): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(141): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(142): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(201): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(202): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(202): error C2143: syntax error: missing ';' before 'constant'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(203): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(203): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(203): error C2065: 'edi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(204): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(204): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(204): error C2065: 'edi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(205): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(205): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(205): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(206): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(206): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(206): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(207): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(207): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(207): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(208): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(208): error C2146: syntax error: missing ';' before identifier 'edx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(208): error C2065: 'edx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(209): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(209): error C2146: syntax error: missing ';' before identifier 'dwSendCallAddr'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(210): error C2065: 'add': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(210): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(210): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(245): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(246): error C2065: 'pushad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(247): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(247): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(247): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(248): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(248): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(248): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(249): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(249): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(249): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(249): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(250): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(250): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(250): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(251): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(251): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(253): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(253): error C2143: syntax error: missing ';' before 'constant'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(254): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(254): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(254): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(255): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(255): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(255): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(255): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(256): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(257): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(257): error C2146: syntax error: missing ';' before identifier 'dwParams'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(258): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(258): error C2146: syntax error: missing ';' before identifier 'dwCall1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(260): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(260): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(260): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(261): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(261): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(261): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(261): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(262): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(262): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(262): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(263): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(263): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(263): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(264): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(264): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(266): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(266): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(266): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(267): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(267): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(267): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(268): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(268): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(268): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(268): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(269): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(269): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(269): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(270): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(270): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(272): error C2065: 'lea': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(272): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(272): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\friendlist.cpp(272): fatal error C1003: error count exceeds 100; stopping compilation
+  Function.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(35): warning C4311: 'type cast': pointer truncation from 'wchar_t *' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(35): warning C4302: 'type cast': truncation from 'wchar_t *' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(38): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(40): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(40): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(40): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(41): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(41): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(41): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(41): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(42): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(42): error C2146: syntax error: missing ';' before identifier 'dwParam1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(43): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(43): error C2146: syntax error: missing ';' before identifier 'dwCall1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(45): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(45): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(45): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(46): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(46): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(46): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(47): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(47): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(47): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(47): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(48): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(48): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(48): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(49): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(49): error C2146: syntax error: missing ';' before identifier 'dwCall2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(51): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(51): error C2143: syntax error: missing ';' before 'constant'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(52): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(52): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(52): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(53): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(53): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(53): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(53): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(54): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(55): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(55): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(55): error C2065: 'edi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(56): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(56): error C2146: syntax error: missing ';' before identifier 'edi'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(56): error C2065: 'edi': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(57): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(57): error C2146: syntax error: missing ';' before identifier 'dwCall3'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(60): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(60): error C2143: syntax error: missing ';' before 'constant'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(61): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(61): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(61): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(62): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(62): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(62): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(62): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(63): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(63): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(63): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(64): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(64): error C2146: syntax error: missing ';' before identifier 'ebx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(64): error C2065: 'ebx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(65): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(65): error C2146: syntax error: missing ';' before identifier 'dwCall4'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(67): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(67): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(67): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(67): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(68): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(68): error C2146: syntax error: missing ';' before identifier 'dwCall5'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(89): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(90): error C2065: 'pushad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(91): error C2146: syntax error: missing ';' before identifier 'sub'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(91): error C2065: 'sub': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(91): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(91): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(92): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(92): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(92): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(92): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(93): error C2146: syntax error: missing ';' before identifier 'mov'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(93): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(93): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(93): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(93): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(94): error C2146: syntax error: missing ';' before identifier 'push'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(94): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(95): error C2146: syntax error: missing ';' before identifier 'eax'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(94): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(95): error C2146: syntax error: missing ';' before identifier 'call'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(95): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(96): error C2146: syntax error: missing ';' before identifier 'callAdd1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(96): error C2146: syntax error: missing ';' before identifier 'call'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(96): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(97): error C2146: syntax error: missing ';' before identifier 'callAdd2'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(97): error C2146: syntax error: missing ';' before identifier 'add'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(97): error C2065: 'add': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(97): error C2146: syntax error: missing ';' before identifier 'esp'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(97): error C2065: 'esp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(99): error C2146: syntax error: missing ';' before identifier 'popad'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(98): error C2065: 'popad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(99): error C2143: syntax error: missing ';' before '}'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(115): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(115): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(118): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(121): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\function.cpp(124): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+  InitWeChat.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\initwechat.cpp(18): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\initwechat.cpp(18): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\initwechat.cpp(22): warning C4312: 'type cast': conversion from 'DWORD' to 'HMODULE' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\initwechat.cpp(75): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\initwechat.cpp(75): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\initwechat.cpp(80): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+  Login.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(5): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(5): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(6): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(6): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(31): error C2485: 'naked': unrecognized extended attribute
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(33): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(35): error C2065: 'pushad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(36): error C2065: 'pushfd': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(37): error C2065: 'push': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(37): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(37): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(38): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(38): error C2146: syntax error: missing ';' before identifier 'SaveImg'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(38): warning C4551: function call missing argument list
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(39): error C2065: 'popfd': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(40): error C2065: 'popad': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(41): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(41): error C2146: syntax error: missing ';' before identifier 'dwOverAddr'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(42): error C2065: 'jmp': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(42): error C2146: syntax error: missing ';' before identifier 'dwRetAddr'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(59): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(62): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(78): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(98): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(98): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(102): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(104): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(104): error C2146: syntax error: missing ';' before identifier 'dwCallAddr1'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(105): error C2065: 'mov': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(105): error C2146: syntax error: missing ';' before identifier 'ecx'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(105): error C2065: 'ecx': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(105): error C2065: 'eax': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(106): error C2065: 'call': undeclared identifier
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\login.cpp(106): error C2146: syntax error: missing ';' before identifier 'dwCallAddr2'
+  MainWindow.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\mainwindow.cpp(7): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\mainwindow.cpp(7): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\mainwindow.cpp(9): warning C4312: 'type cast': conversion from 'DWORD' to 'LPTHREAD_START_ROUTINE' of greater size
+  SelfInformation.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(150): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(167): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(171): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(171): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(175): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(182): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(182): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(189): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(189): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(195): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(200): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(206): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(212): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(217): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(219): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(223): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(223): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(230): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(230): warning C4312: 'type cast': conversion from 'DWORD' to 'wchar_t *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(235): warning C4312: 'type cast': conversion from 'DWORD' to 'char *' of greater size
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\selfinformation.cpp(240): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+  WeChatHelper.cpp
+  WndMsgLoop.cpp
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\wndmsgloop.cpp(32): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\wndmsgloop.cpp(32): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+c:\mysrc\github\mailme\xapanyun\wechatrobot-master\wechathelper\wndmsgloop.cpp(36): warning C4312: 'type cast': conversion from 'DWORD' to 'DWORD *' of greater size
+  Generating Code...

@@ -5,28 +5,28 @@
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: GetSelfInformation
-// º¯ÊıËµÃ÷: »ñÈ¡¸öÈËĞÅÏ¢
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/12/4
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: GetSelfInformation
+// å‡½æ•°è¯´æ˜: è·å–ä¸ªäººä¿¡æ¯
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/12/4
+// å‚    æ•°: void
+// è¿” å› å€¼: void 
 //************************************************************
 //void GetInformation()
 //{
 //	Information *info = new Information;
 //	char tempcontent[0x300];
-//	//»ñÈ¡WeChatWinµÄ»ùÖ·
+//	//è·å–WeChatWinçš„åŸºå€
 //	DWORD dwWeChatWinAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll");
 //
-//	//Î¢ĞÅID ÕâÀïĞèÒª¼æÈİĞÂÀÏÎ¢ĞÅºÅ  ĞÂÎ¢ĞÅºÅÊÇÖ¸Õë ÀÏÎ¢ĞÅºÅÊÇ×Ö·û´®
+//	//å¾®ä¿¡ID è¿™é‡Œéœ€è¦å…¼å®¹æ–°è€å¾®ä¿¡å·  æ–°å¾®ä¿¡å·æ˜¯æŒ‡é’ˆ è€å¾®ä¿¡å·æ˜¯å­—ç¬¦ä¸²
 //	memset(tempcontent, 0, 0x300);
 //	DWORD pWxid = dwWeChatWinAddr + 0x161C814;
-//	//Èç¹û³¤¶ÈĞ¡ÓÚ6»òÕß´óÓÚ20 ËµÃ÷Õâ¸öµØ·½ÊÇ¸öÖ¸Õë
+//	//å¦‚æœé•¿åº¦å°äº6æˆ–è€…å¤§äº20 è¯´æ˜è¿™ä¸ªåœ°æ–¹æ˜¯ä¸ªæŒ‡é’ˆ
 //	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWinAddr + 0x161C814));
 //	if (strlen(tempcontent) < 0x6 || strlen(tempcontent) > 0x14)
 //	{
-//		//ËµÃ÷ÊÇĞÂµÄÎ¢ĞÅºÅ Î¢ĞÅIDÓÃµØÖ·±£´æ
+//		//è¯´æ˜æ˜¯æ–°çš„å¾®ä¿¡å· å¾®ä¿¡IDç”¨åœ°å€ä¿å­˜
 //		sprintf_s(tempcontent, "%s", (char*)(*(DWORD*)(dwWeChatWinAddr + 0x161C814)));
 //	}
 //	else
@@ -35,7 +35,7 @@
 //	}
 //	wcscpy_s(info->wxid, wcslen(UTF8ToUnicode(tempcontent)) + 1, UTF8ToUnicode(tempcontent));
 //
-//	//Î¢ĞÅID
+//	//å¾®ä¿¡ID
 //	//char wxid[0x1000] = { 0 };
 //	//DWORD pWxid = dwWeChatWinAddr + 0x161C814;
 //	//sprintf_s(wxid, "%s", (char*)(*(DWORD*)pWxid));
@@ -45,23 +45,23 @@
 //	//}
 //	//else
 //	//{
-//	//	wcscpy_s(info->wxid, wcslen(L"Î¢ĞÅIDÔİÊ±ÎŞ·¨ÏÔÊ¾") + 1, L"Î¢ĞÅIDÔİÊ±ÎŞ·¨ÏÔÊ¾");
+//	//	wcscpy_s(info->wxid, wcslen(L"å¾®ä¿¡IDæš‚æ—¶æ— æ³•æ˜¾ç¤º") + 1, L"å¾®ä¿¡IDæš‚æ—¶æ— æ³•æ˜¾ç¤º");
 //	//}
 //
-//	//Î¢ĞÅĞÔ±ğ
+//	//å¾®ä¿¡æ€§åˆ«
 //	char sex[4] = { 0 };
 //	memcpy(sex, (void*)(pWxid + 0x160), 1);
 //
 //	if (sex[0] == 1)
 //	{
-//		wcscpy_s(info->wxsex, wcslen(L"ÄĞ") + 1, L"ÄĞ");
+//		wcscpy_s(info->wxsex, wcslen(L"ç”·") + 1, L"ç”·");
 //	}
 //	if (sex[0] == 2)
 //	{
-//		wcscpy_s(info->wxsex, wcslen(L"Å®") + 1, L"Å®");
+//		wcscpy_s(info->wxsex, wcslen(L"å¥³") + 1, L"å¥³");
 //	}
 //
-//	//Î¢ĞÅêÇ³Æ
+//	//å¾®ä¿¡æ˜µç§°
 //	char nickname[40] = { 0 };
 //	if (*(DWORD*)(pWxid + 0x78 + 0x14) == 0xF)
 //	{
@@ -75,62 +75,62 @@
 //		wcscpy_s(info->nickname, wcslen(UTF8ToUnicode(nickname)) + 1, UTF8ToUnicode(nickname));
 //	}
 //
-//	//Î¢ĞÅÕËºÅ
+//	//å¾®ä¿¡è´¦å·
 //	char wxcount[40] = { 0 };
 //	sprintf_s(wxcount, "%s", (char*)(pWxid + 0x1DC));
 //	wcscpy_s(info->wxcount, wcslen(UTF8ToUnicode(wxcount)) + 1, UTF8ToUnicode(wxcount));
 //
-//	//ÊÖ»úºÅ
+//	//æ‰‹æœºå·
 //	char phone[40] = { 0 };
 //	sprintf_s(phone, "%s", (char*)(pWxid + 0xAC));
 //	wcscpy_s(info->phonenumber, wcslen(UTF8ToUnicode(phone)) + 1, UTF8ToUnicode(phone));
 //
-//	//µÇÂ½Éè±¸
+//	//ç™»é™†è®¾å¤‡
 //	char device[15] = { 0 };
 //	sprintf_s(device, "%s", (char*)(pWxid + 0x4B4));
 //	wcscpy_s(info->device, wcslen(UTF8ToUnicode(device)) + 1, UTF8ToUnicode(device));
 //
-//	//¹ú¼®
+//	//å›½ç±
 //	char nation[10] = { 0 };
 //	sprintf_s(nation, "%s", (char*)(pWxid + 0x254));
 //	wcscpy_s(info->nation, wcslen(UTF8ToUnicode(nation)) + 1, UTF8ToUnicode(nation));
 //
-//	//Ê¡·İ
+//	//çœä»½
 //	char province[20] = { 0 };
 //	sprintf_s(province, "%s", (char*)(pWxid + 0x164));
 //	wcscpy_s(info->province, wcslen(UTF8ToUnicode(province)) + 1, UTF8ToUnicode(province));
 //
-//	//³ÇÊĞ
+//	//åŸå¸‚
 //	char city[20] = { 0 };
 //	sprintf_s(city, "%s", (char*)(pWxid + 0x17C));
 //	wcscpy_s(info->city, wcslen(UTF8ToUnicode(city)) + 1, UTF8ToUnicode(city));
 //
 //
-//	//Ğ¡Í·Ïñ
+//	//å°å¤´åƒ
 //	char header[0x100] = { 0 };
 //	DWORD pHeader = pWxid + 0x358;
 //	sprintf_s(header, "%s", (char*)(*(DWORD*)pHeader));
 //	wcscpy_s(info->smallheader, wcslen(UTF8ToUnicode(header)) + 1, UTF8ToUnicode(header));
 //
 //
-//	//´óÍ·Ïñ
+//	//å¤§å¤´åƒ
 //	char bigheader[0x100] = { 0 };
 //	DWORD pbigheader = pWxid + 0x340;
 //	sprintf_s(bigheader, "%s", (char*)(*(DWORD*)pbigheader));
 //	wcscpy_s(info->bigheader, wcslen(UTF8ToUnicode(bigheader)) + 1, UTF8ToUnicode(bigheader));
 //
-//	//·¢ËÍµ½¿Í»§¶Ë
+//	//å‘é€åˆ°å®¢æˆ·ç«¯
 //	HWND hInformation = FindWindow(NULL, L"Information");
 //	if (hInformation == NULL)
 //	{
-//		OutputDebugStringA("Î´²éÕÒµ½Information´°¿Ú");
+//		OutputDebugStringA("æœªæŸ¥æ‰¾åˆ°Informationçª—å£");
 //		return;
 //	}
 //	COPYDATASTRUCT information_msg;
 //	information_msg.dwData = WM_GetInformation;
 //	information_msg.lpData = info;
 //	information_msg.cbData = sizeof(Information);
-//	//·¢ËÍÏûÏ¢¸ø¿ØÖÆ¶Ë
+//	//å‘é€æ¶ˆæ¯ç»™æ§åˆ¶ç«¯
 //	SendMessage(hInformation, WM_COPYDATA, (WPARAM)hInformation, (LPARAM)&information_msg);
 //
 //	delete info;
@@ -145,11 +145,11 @@ void GetInformation()
 	DWORD dwWeChatWin = GetWeChatWinBase();
 
 	char tempcontent[0x300];
-	//Î¢ĞÅºÅ
+	//å¾®ä¿¡å·
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxCount));
 
-	//ÅĞ¶ÏÊÇ·ñÎª0 ÊÇ0ËµÃ÷Î¢ĞÅºÅÎª¿Õ
+	//åˆ¤æ–­æ˜¯å¦ä¸º0 æ˜¯0è¯´æ˜å¾®ä¿¡å·ä¸ºç©º
 	if (tempcontent[0] == 0)
 	{
 		wcscpy_s(info->wxcount, wcslen(L"NULL") + 1, L"NULL");
@@ -160,14 +160,14 @@ void GetInformation()
 	}
 
 
-	//Î¢ĞÅID ÕâÀïĞèÒª¼æÈİĞÂÀÏÎ¢ĞÅºÅ  ĞÂÎ¢ĞÅºÅÊÇÖ¸Õë ÀÏÎ¢ĞÅºÅÊÇ×Ö·û´®
+	//å¾®ä¿¡ID è¿™é‡Œéœ€è¦å…¼å®¹æ–°è€å¾®ä¿¡å·  æ–°å¾®ä¿¡å·æ˜¯æŒ‡é’ˆ è€å¾®ä¿¡å·æ˜¯å­—ç¬¦ä¸²
 	memset(tempcontent, 0, 0x300);
 	DWORD pWxid = dwWeChatWin + WxID;
-	//Èç¹û³¤¶ÈĞ¡ÓÚ6»òÕß´óÓÚ20 ËµÃ÷Õâ¸öµØ·½ÊÇ¸öÖ¸Õë
+	//å¦‚æœé•¿åº¦å°äº6æˆ–è€…å¤§äº20 è¯´æ˜è¿™ä¸ªåœ°æ–¹æ˜¯ä¸ªæŒ‡é’ˆ
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxID));
 	if (strlen(tempcontent) < 0x6 || strlen(tempcontent) > 0x14)
 	{
-		//ËµÃ÷ÊÇĞÂµÄÎ¢ĞÅºÅ Î¢ĞÅIDÓÃµØÖ·±£´æ
+		//è¯´æ˜æ˜¯æ–°çš„å¾®ä¿¡å· å¾®ä¿¡IDç”¨åœ°å€ä¿å­˜
 		sprintf_s(tempcontent, "%s", (char*)(*(DWORD*)(dwWeChatWin + WxID)));
 	}
 	else
@@ -177,42 +177,42 @@ void GetInformation()
 	wcscpy_s(info->wxid, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
-	//Ğ¡Í·Ïñ
+	//å°å¤´åƒ
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(*(DWORD*)(dwWeChatWin + WxSmallHeader)));
 	wcscpy_s(info->smallheader, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
 
-	//´óÍ·Ïñ
+	//å¤§å¤´åƒ
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(*(DWORD*)(dwWeChatWin + WxBigHeader)));
 	wcscpy_s(info->bigheader, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
-	//¹ú¼Ò
+	//å›½å®¶
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxNation));
 	wcscpy_s(info->nation, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
-	//Ê¡·İ
+	//çœä»½
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxProvince));
 	wcscpy_s(info->province, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
-	//³ÇÊĞ
+	//åŸå¸‚
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxCity));
 	wcscpy_s(info->city, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
-	//ÊÖ»úºÅ
+	//æ‰‹æœºå·
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxPhoneNumber));
 	wcscpy_s(info->phonenumber, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
-	//êÇ³Æ
+	//æ˜µç§°
 	memset(tempcontent, 0, 0x300);
 	if (*(DWORD*)(dwWeChatWin + WxNickName + 0x14) == 0xF)
 	{
@@ -226,42 +226,42 @@ void GetInformation()
 	wcscpy_s(info->nickname, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
-	//»º´æÄ¿Â¼
+	//ç¼“å­˜ç›®å½•
 	swprintf_s(info->cachedir, L"%s", (wchar_t*)(*(DWORD*)(dwWeChatWin + WxCacheDir)));
 
 
-	//µÇÂ½Éè±¸
+	//ç™»é™†è®¾å¤‡
 	memset(tempcontent, 0, 0x300);
 	sprintf_s(tempcontent, "%s", (char*)(dwWeChatWin + WxDevice));
 	wcscpy_s(info->device, wcslen(UTF8ToUnicode2(tempcontent).c_str()) + 1, UTF8ToUnicode2(tempcontent).c_str());
 
 
-	//ĞÔ±ğ
+	//æ€§åˆ«
 	DWORD nSex = *(DWORD*)(dwWeChatWin + WxSex);
 	if (nSex == 1)
 	{
-		wcscpy_s(info->wxsex, wcslen(L"ÄĞ") + 1, L"ÄĞ");
+		wcscpy_s(info->wxsex, wcslen(L"ç”·") + 1, L"ç”·");
 	}
 	else if (nSex == 2)
 	{
-		wcscpy_s(info->wxsex, wcslen(L"Å®") + 1, L"Å®");
+		wcscpy_s(info->wxsex, wcslen(L"å¥³") + 1, L"å¥³");
 	}
 	else
 	{
-		wcscpy_s(info->wxsex, wcslen(L"Î´ÉèÖÃ") + 1, L"Î´ÉèÖÃ");
+		wcscpy_s(info->wxsex, wcslen(L"æœªè®¾ç½®") + 1, L"æœªè®¾ç½®");
 	}
 
 
 	HWND hInformation = FindWindow(NULL, L"Information");
 	if (hInformation == NULL)
 	{
-		OutputDebugStringA("Î´²éÕÒµ½Information´°¿Ú");
+		OutputDebugStringA("æœªæŸ¥æ‰¾åˆ°Informationçª—å£");
 		return;
 	}
 	COPYDATASTRUCT information_msg;
 	information_msg.dwData = WM_GetInformation;
 	information_msg.lpData = info.get();
 	information_msg.cbData = sizeof(PersonalInformation);
-	//·¢ËÍÏûÏ¢¸ø¿ØÖÆ¶Ë
+	//å‘é€æ¶ˆæ¯ç»™æ§åˆ¶ç«¯
 	SendMessage(hInformation, WM_COPYDATA, (WPARAM)hInformation, (LPARAM)&information_msg);
 }

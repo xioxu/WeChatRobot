@@ -11,14 +11,14 @@
 #pragma comment(lib, "Version.lib")
 
 
-//±£´æËùÓĞºÃÓÑÁĞ±íµÄmapÈİÆ÷
+//ä¿å­˜æ‰€æœ‰å¥½å‹åˆ—è¡¨çš„mapå®¹å™¨
 map<wstring, wstring> g_userinfolist;
 
 DWORD overWritedCallAdd= GetWeChatWinBase() + WxFriendListCall;
 
 DWORD jumBackAddress= GetWeChatWinBase() + WxFriendList+5;
 
-//ÍÆ¼öºÅÁĞ±í
+//æ¨èå·åˆ—è¡¨
 wstring g_referencenumber[11] =
 {
 	L"fmessage",L"qqmail",L"medianote",L"qmessage",L"newsapp",L"filehelper"
@@ -26,12 +26,12 @@ wstring g_referencenumber[11] =
 };
 
 //************************************************************
-// º¯ÊıÃû³Æ: HookGetFriendList
-// º¯ÊıËµÃ÷: HOOK»ñÈ¡ºÃÓÑÁĞ±íµÄcall 
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/4
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: HookGetFriendList
+// å‡½æ•°è¯´æ˜: HOOKè·å–å¥½å‹åˆ—è¡¨çš„call 
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/4
+// å‚    æ•°: void
+// è¿” å› å€¼: void 
 //************************************************************
 void HookGetFriendList()
 {
@@ -41,12 +41,12 @@ void HookGetFriendList()
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: GetUserListInfo
-// º¯ÊıËµÃ÷: »ñÈ¡ÓÃ»§ĞÅÏ¢
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/4
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: GetUserListInfo
+// å‡½æ•°è¯´æ˜: è·å–ç”¨æˆ·ä¿¡æ¯
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/4
+// å‚    æ•°: void
+// è¿” å› å€¼: void 
 //************************************************************
 __declspec(naked) void GetUserListInfo()
 {
@@ -57,29 +57,29 @@ __declspec(naked) void GetUserListInfo()
 		call SendUserListInfo;
 		popad;
 
-		//²¹³ä±»¸²¸ÇµÄ´úÂë
+		//è¡¥å……è¢«è¦†ç›–çš„ä»£ç 
 		call overWritedCallAdd;
 
-		//Ìø»Ø±»HOOKÖ¸ÁîµÄÏÂÒ»ÌõÖ¸Áî
+		//è·³å›è¢«HOOKæŒ‡ä»¤çš„ä¸‹ä¸€æ¡æŒ‡ä»¤
 		jmp jumBackAddress
 	}
 }
 
 //************************************************************
-// º¯ÊıÃû³Æ: ReSendUser
-// º¯ÊıËµÃ÷: ÔÙ´Î·¢ËÍºÃÓÑĞÅÏ¢
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/4
-// ²Î    Êı: user
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: ReSendUser
+// å‡½æ•°è¯´æ˜: å†æ¬¡å‘é€å¥½å‹ä¿¡æ¯
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/4
+// å‚    æ•°: user
+// è¿” å› å€¼: void 
 //************************************************************
 void ReSendUser(UserListInfo* user)
 {
 	HWND hWnd = NULL;
 	while (true)
 	{
-		//·¢ËÍµ½¿ØÖÆ¶Ë
-		hWnd = FindWindow(NULL, TEXT("Î¢ĞÅÖúÊÖ"));
+		//å‘é€åˆ°æ§åˆ¶ç«¯
+		hWnd = FindWindow(NULL, TEXT("å¾®ä¿¡åŠ©æ‰‹"));
 		if (hWnd == NULL)
 		{
 			Sleep(200);
@@ -89,9 +89,9 @@ void ReSendUser(UserListInfo* user)
 	}
 
 	COPYDATASTRUCT userinfo;
-	userinfo.dwData = WM_GetFriendList;//±£´æÒ»¸öÊıÖµ, ¿ÉÒÔÓÃÀ´×÷±êÖ¾µÈ
-	userinfo.cbData = sizeof(UserListInfo);// strlen(szSendBuf);//´ı·¢ËÍµÄÊı¾İµÄ³¤
-	userinfo.lpData = user;// szSendBuf;//´ı·¢ËÍµÄÊı¾İµÄÆğÊ¼µØÖ·(¿ÉÒÔÎªNULL)
+	userinfo.dwData = WM_GetFriendList;//ä¿å­˜ä¸€ä¸ªæ•°å€¼, å¯ä»¥ç”¨æ¥ä½œæ ‡å¿—ç­‰
+	userinfo.cbData = sizeof(UserListInfo);// strlen(szSendBuf);//å¾…å‘é€çš„æ•°æ®çš„é•¿
+	userinfo.lpData = user;// szSendBuf;//å¾…å‘é€çš„æ•°æ®çš„èµ·å§‹åœ°å€(å¯ä»¥ä¸ºNULL)
 	SendMessage(hWnd, WM_COPYDATA, (WPARAM)hWnd, (LPARAM)&userinfo);
 	delete user;
 }
@@ -100,31 +100,31 @@ void ReSendUser(UserListInfo* user)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: SendUserListInfo
-// º¯ÊıËµÃ÷: ·¢ËÍºÃÓÑÁĞ±í
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/4
-// ²Î    Êı: r_esi ºÃÓÑÁĞ±íËùÔÚµÄÊı¾İÖ¸Õë
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: SendUserListInfo
+// å‡½æ•°è¯´æ˜: å‘é€å¥½å‹åˆ—è¡¨
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/4
+// å‚    æ•°: r_esi å¥½å‹åˆ—è¡¨æ‰€åœ¨çš„æ•°æ®æŒ‡é’ˆ
+// è¿” å› å€¼: void 
 //************************************************************
 void __stdcall SendUserListInfo(DWORD r_esi)
 {
-	//¸öÈËÎ¢ĞÅºÅ¡¢ÈººÅ
+	//ä¸ªäººå¾®ä¿¡å·ã€ç¾¤å·
 	wstring wxid = GetMsgByAddress(r_esi + 0x8);
 	wstring nickname = GetMsgByAddress(r_esi + 0x64);
 
-	//ºÃÓÑÁĞ±íÈ¥ÖØ
+	//å¥½å‹åˆ—è¡¨å»é‡
 	map<wstring, wstring>::iterator it;
 	it = g_userinfolist.find(wxid);
-	//Èç¹û·µ»ØÖµ²»µÈÓÚend() ËµÃ÷ÕÒµ½ÁË Ö±½Ó·µ»Ø·ÀÖ¹ÖØ¸´
+	//å¦‚æœè¿”å›å€¼ä¸ç­‰äºend() è¯´æ˜æ‰¾åˆ°äº† ç›´æ¥è¿”å›é˜²æ­¢é‡å¤
 	if (it != g_userinfolist.end())
 	{
 		return;
 	}
-	//Èç¹ûÃ»ÓĞÕÒµ½ Ôò²åÈëµ½ÈİÆ÷
+	//å¦‚æœæ²¡æœ‰æ‰¾åˆ° åˆ™æ’å…¥åˆ°å®¹å™¨
 	g_userinfolist.insert(make_pair(wxid, nickname));
 
-	//ÅÅ³ıÍÆ¼öºÅÁĞ±í
+	//æ’é™¤æ¨èå·åˆ—è¡¨
 	for (int i = 0; i < 11; i++)
 	{
 		if (g_referencenumber[i] == wxid)
@@ -136,10 +136,10 @@ void __stdcall SendUserListInfo(DWORD r_esi)
 
 	unique_ptr<UserListInfo> user(new UserListInfo);
 
-	LPVOID pUserWxid = *((LPVOID *)(r_esi + 0x8));		//Î¢ĞÅID
-	LPVOID pUserNumber = *((LPVOID *)(r_esi + 0x1C));	//Î¢ĞÅºÅ
-	LPVOID pUserNick = *((LPVOID *)(r_esi + 0x64));		//êÇ³Æ
-	LPVOID pUserReMark = *((LPVOID *)(r_esi + 0x50));	//±¸×¢
+	LPVOID pUserWxid = *((LPVOID *)(r_esi + 0x8));		//å¾®ä¿¡ID
+	LPVOID pUserNumber = *((LPVOID *)(r_esi + 0x1C));	//å¾®ä¿¡å·
+	LPVOID pUserNick = *((LPVOID *)(r_esi + 0x64));		//æ˜µç§°
+	LPVOID pUserReMark = *((LPVOID *)(r_esi + 0x50));	//å¤‡æ³¨
 
 	swprintf_s(user->UserId, L"%s", (wchar_t*)pUserWxid);
 	swprintf_s(user->UserNumber, L"%s", (wchar_t*)pUserNumber);
@@ -147,8 +147,8 @@ void __stdcall SendUserListInfo(DWORD r_esi)
 	swprintf_s(user->UserRemark, L"%s", (wchar_t*)pUserReMark);
 
 
-	//·¢ËÍµ½¿ØÖÆ¶Ë
-	HWND hWnd = FindWindow(NULL, TEXT("Î¢ĞÅÖúÊÖ"));
+	//å‘é€åˆ°æ§åˆ¶ç«¯
+	HWND hWnd = FindWindow(NULL, TEXT("å¾®ä¿¡åŠ©æ‰‹"));
 	if (hWnd == NULL)
 	{
 		UserListInfo* outuser = new UserListInfo;
@@ -164,40 +164,40 @@ void __stdcall SendUserListInfo(DWORD r_esi)
 	}
 	
 	COPYDATASTRUCT userinfo;
-	userinfo.dwData = WM_GetFriendList;//±£´æÒ»¸öÊıÖµ, ¿ÉÒÔÓÃÀ´×÷±êÖ¾µÈ
-	userinfo.cbData = sizeof(UserListInfo);// strlen(szSendBuf);//´ı·¢ËÍµÄÊı¾İµÄ³¤
-	userinfo.lpData = user.get();// szSendBuf;//´ı·¢ËÍµÄÊı¾İµÄÆğÊ¼µØÖ·(¿ÉÒÔÎªNULL)
+	userinfo.dwData = WM_GetFriendList;//ä¿å­˜ä¸€ä¸ªæ•°å€¼, å¯ä»¥ç”¨æ¥ä½œæ ‡å¿—ç­‰
+	userinfo.cbData = sizeof(UserListInfo);// strlen(szSendBuf);//å¾…å‘é€çš„æ•°æ®çš„é•¿
+	userinfo.lpData = user.get();// szSendBuf;//å¾…å‘é€çš„æ•°æ®çš„èµ·å§‹åœ°å€(å¯ä»¥ä¸ºNULL)
 	SendMessage(hWnd, WM_COPYDATA, (WPARAM)hWnd, (LPARAM)&userinfo);
 }
 
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: SendTextMessage
-// º¯ÊıËµÃ÷: ·¢ËÍÎÄ±¾ÏûÏ¢
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/4
-// ²Î    Êı: wxid Î¢ĞÅID msgÏûÏ¢ÄÚÈİ
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: SendTextMessage
+// å‡½æ•°è¯´æ˜: å‘é€æ–‡æœ¬æ¶ˆæ¯
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/4
+// å‚    æ•°: wxid å¾®ä¿¡ID msgæ¶ˆæ¯å†…å®¹
+// è¿” å› å€¼: void 
 //************************************************************
 void SendTextMessage(wchar_t* wxid, wchar_t* msg)
 {
-	//ÄÃµ½·¢ËÍÏûÏ¢µÄcallµÄµØÖ·
+	//æ‹¿åˆ°å‘é€æ¶ˆæ¯çš„callçš„åœ°å€
 	DWORD dwSendCallAddr = GetWeChatWinBase() + WxSendMessage;
 
-	//×é×°Î¢ĞÅID/ÈºIDµÄ½á¹¹Ìå
+	//ç»„è£…å¾®ä¿¡ID/ç¾¤IDçš„ç»“æ„ä½“
 	GeneralStruct id(wxid);
-	//ÏûÏ¢ÄÚÈİ
+	//æ¶ˆæ¯å†…å®¹
 	GeneralStruct text(msg);
 
-	//È¡³öÎ¢ĞÅIDºÍÏûÏ¢µÄµØÖ·
+	//å–å‡ºå¾®ä¿¡IDå’Œæ¶ˆæ¯çš„åœ°å€
 	char* pWxid = (char*)&id.pstr;
 	char* pWxmsg = (char*)&text.pstr;
 
 	char buff[0x81C] = { 0 };
 	char buff2[0x81C] = { 0 };
 
-	//µ÷ÓÃÎ¢ĞÅ·¢ËÍÏûÏ¢call
+	//è°ƒç”¨å¾®ä¿¡å‘é€æ¶ˆæ¯call
 	__asm {
 		push 0x1;
 		lea edi, buff2;
@@ -213,30 +213,30 @@ void SendTextMessage(wchar_t* wxid, wchar_t* msg)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: SendFileMessage
-// º¯ÊıËµÃ÷: ·¢ËÍÎÄ¼şÏûÏ¢
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/4
-// ²Î    Êı: wxid Î¢ĞÅID filepath ÎÄ¼şÂ·¾¶
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: SendFileMessage
+// å‡½æ•°è¯´æ˜: å‘é€æ–‡ä»¶æ¶ˆæ¯
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/4
+// å‚    æ•°: wxid å¾®ä¿¡ID filepath æ–‡ä»¶è·¯å¾„
+// è¿” å› å€¼: void 
 //************************************************************
 void SendFileMessage(wchar_t* wxid, wchar_t* filepath)
 {
-	//¹¹ÔìĞèÒªµÄµØÖ·
+	//æ„é€ éœ€è¦çš„åœ°å€
 	DWORD dwBase = GetWeChatWinBase();
 	DWORD dwCall1 = dwBase + WxFileMessage1;
 	DWORD dwCall2 = dwBase + WxFileMessage2;
-	DWORD dwCall3 = dwBase + WxFileMessage3;	//×éºÏÊı¾İ
-	DWORD dwCall4 = dwBase + WxFileMessage4;	//·¢ËÍÏûÏ¢
+	DWORD dwCall3 = dwBase + WxFileMessage3;	//ç»„åˆæ•°æ®
+	DWORD dwCall4 = dwBase + WxFileMessage4;	//å‘é€æ¶ˆæ¯
 	DWORD dwParams = dwBase + WxFileMessageParam;
 
 	char buff[0x528] = { 0 };
 
-	//¹¹ÔìĞèÒªµÄÊı¾İ
+	//æ„é€ éœ€è¦çš„æ•°æ®
 	GeneralStruct wxidStruct(wxid);
 	GeneralStruct filePathStruct(filepath);
 
-	//È¡³öĞèÒªµÄÊı¾İµÄµØÖ·
+	//å–å‡ºéœ€è¦çš„æ•°æ®çš„åœ°å€
 	char* pFilePath = (char*)&filePathStruct.pstr;
 	char* pWxid = (char*)&wxidStruct.pstr;
 
@@ -282,18 +282,18 @@ void SendFileMessage(wchar_t* wxid, wchar_t* filepath)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: SendImageMessage
-// º¯ÊıËµÃ÷: ·¢ËÍÍ¼Æ¬ÏûÏ¢
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/7
-// ²Î    Êı: wxid Î¢ĞÅID filepath Í¼Æ¬Â·¾¶
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: SendImageMessage
+// å‡½æ•°è¯´æ˜: å‘é€å›¾ç‰‡æ¶ˆæ¯
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/7
+// å‚    æ•°: wxid å¾®ä¿¡ID filepath å›¾ç‰‡è·¯å¾„
+// è¿” å› å€¼: void 
 //************************************************************
 void SendImageMessage(wchar_t* wxid, wchar_t* filepath)
 {
-	//×é×°Î¢ĞÅIDµÄÊı¾İ½á¹¹
+	//ç»„è£…å¾®ä¿¡IDçš„æ•°æ®ç»“æ„
 	GeneralStruct imagewxid(wxid);
-	//×é×°ÎÄ¼şÂ·¾¶µÄÊı¾İ½á¹¹
+	//ç»„è£…æ–‡ä»¶è·¯å¾„çš„æ•°æ®ç»“æ„
 	GeneralStruct imagefilepath(filepath);
 	char buff[0x528] = { 0 };
 	char buff2[0x60] = { 0 };
@@ -304,16 +304,16 @@ void SendImageMessage(wchar_t* wxid, wchar_t* filepath)
 	DWORD dwCall2 = GetWeChatWinBase() + WxSendImageCall2;
 
 
-	//Î¢ĞÅ·¢ËÍÍ¼Æ¬µ÷ÓÃÁËGidCreateBimapFileCM Ö®ºóÍ¼Æ¬Ò»Ö±±»Õ¼ÓÃ ÎŞ·¨É¾³ı patchµôÏÂÃæµÄ´úÂë
+	//å¾®ä¿¡å‘é€å›¾ç‰‡è°ƒç”¨äº†GidCreateBimapFileCM ä¹‹åå›¾ç‰‡ä¸€ç›´è¢«å ç”¨ æ— æ³•åˆ é™¤ patchæ‰ä¸‹é¢çš„ä»£ç 
 	unsigned char oldcode[5] = {0};
 	unsigned char fix[5] = { 0x31,0xC0,0x90,0x90,0x90 };
 	DWORD dwPathcAddr = GetWeChatWinBase() + WxPatchAddr;
-	//ĞŞ¸Ä´úÂë¶ÎÊôĞÔ
+	//ä¿®æ”¹ä»£ç æ®µå±æ€§
 	DWORD dwOldAttr = 0;
 	VirtualProtect((LPVOID)dwPathcAddr, 5, PAGE_EXECUTE_READWRITE, &dwOldAttr);
-	//ÏÈ±£´æÔ­ÓĞÖ¸Áî
+	//å…ˆä¿å­˜åŸæœ‰æŒ‡ä»¤
 	memcpy(oldcode, (LPVOID)dwPathcAddr, 5);
-	//ÔÙPatchµô
+	//å†Patchæ‰
 	memcpy((LPVOID)dwPathcAddr, fix, 5);
 
 
@@ -336,25 +336,25 @@ void SendImageMessage(wchar_t* wxid, wchar_t* filepath)
 		call dwCall2;
 		popad;
 	}
-	//µ÷ÓÃÍêÖ®ºó»Ö¸´
+	//è°ƒç”¨å®Œä¹‹åæ¢å¤
 	memcpy((LPVOID)dwPathcAddr, oldcode, 5);
-	//»Ö¸´ÊôĞÔ
+	//æ¢å¤å±æ€§
 	VirtualProtect((LPVOID)dwPathcAddr, 5, dwOldAttr, &dwOldAttr);
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: WxDeleteUser
-// º¯ÊıËµÃ÷: É¾³ıºÃÓÑ
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/8
-// ²Î    Êı: wxid Î¢ĞÅID
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: WxDeleteUser
+// å‡½æ•°è¯´æ˜: åˆ é™¤å¥½å‹
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/8
+// å‚    æ•°: wxid å¾®ä¿¡ID
+// è¿” å› å€¼: void 
 //************************************************************
 void DeleteUser(wchar_t* wxid)
 {
 	DWORD dwBaseAddress = GetWeChatWinBase();
-	//¹¹ÔìÊı¾İ
+	//æ„é€ æ•°æ®
 	GeneralStruct structWxid(wxid);
 	DWORD* asmMsg = (DWORD*)&structWxid.pstr;
 	DWORD dwCallAddr = dwBaseAddress + WxDeleteUser;
@@ -371,17 +371,17 @@ void DeleteUser(wchar_t* wxid)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: SendXmlCard
-// º¯ÊıËµÃ÷: ·¢ËÍXMLÃûÆ¬
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/7/10
-// ²Î    Êı: RecverWxid ·¢ËÍÕßÎ¢ĞÅID SendWxidÒª·¢ËÍµÄÎ¢ĞÅID NickNameÎ¢ĞÅêÇ³Æ
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: SendXmlCard
+// å‡½æ•°è¯´æ˜: å‘é€XMLåç‰‡
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/7/10
+// å‚    æ•°: RecverWxid å‘é€è€…å¾®ä¿¡ID SendWxidè¦å‘é€çš„å¾®ä¿¡ID NickNameå¾®ä¿¡æ˜µç§°
+// è¿” å› å€¼: void 
 //************************************************************
 void SendXmlCard(wchar_t* RecverWxid, wchar_t* SendWxid, wchar_t* NickName)
 {
 	wchar_t xml[0x2000] = { 0 };
-	swprintf_s(xml, L"<?xml version=\"1.0\"?><msg bigheadimgurl=\"http://wx.qlogo.cn/mmhead/ver_1/7IiaGRVxyprWcBA9v2IA1NLRa1K5YbEX5dBzmcEKw4OupNxsYuYSBt1zG91O6p07XlIOQIFhPCC3hU1icJMk3z28Ygh6IhfZrV4oYtXZXEU5A/0\" smallheadimgurl=\"http://wx.qlogo.cn/mmhead/ver_1/7IiaGRVxyprWcBA9v2IA1NLRa1K5YbEX5dBzmcEKw4OupNxsYuYSBt1zG91O6p07XlIOQIFhPCC3hU1icJMk3z28Ygh6IhfZrV4oYtXZXEU5A/132\" username=\"%s\" nickname=\"%s\" fullpy=\"?\" shortpy=\"\" alias=\"%s\" imagestatus=\"3\" scene=\"17\" province=\"±±¾©\" city=\"ÖĞ¹ú\" sign=\"\" sex=\"2\" certflag=\"0\" certinfo=\"\" brandIconUrl=\"\" brandHomeUrl=\"\" brandSubscriptConfigUrl= \"\" brandFlags=\"0\" regionCode=\"CN_BeiJing_BeiJing\" />", SendWxid, NickName, SendWxid);
+	swprintf_s(xml, L"<?xml version=\"1.0\"?><msg bigheadimgurl=\"http://wx.qlogo.cn/mmhead/ver_1/7IiaGRVxyprWcBA9v2IA1NLRa1K5YbEX5dBzmcEKw4OupNxsYuYSBt1zG91O6p07XlIOQIFhPCC3hU1icJMk3z28Ygh6IhfZrV4oYtXZXEU5A/0\" smallheadimgurl=\"http://wx.qlogo.cn/mmhead/ver_1/7IiaGRVxyprWcBA9v2IA1NLRa1K5YbEX5dBzmcEKw4OupNxsYuYSBt1zG91O6p07XlIOQIFhPCC3hU1icJMk3z28Ygh6IhfZrV4oYtXZXEU5A/132\" username=\"%s\" nickname=\"%s\" fullpy=\"?\" shortpy=\"\" alias=\"%s\" imagestatus=\"3\" scene=\"17\" province=\"åŒ—äº¬\" city=\"ä¸­å›½\" sign=\"\" sex=\"2\" certflag=\"0\" certinfo=\"\" brandIconUrl=\"\" brandHomeUrl=\"\" brandSubscriptConfigUrl= \"\" brandFlags=\"0\" regionCode=\"CN_BeiJing_BeiJing\" />", SendWxid, NickName, SendWxid);
 	GeneralStruct pWxid(RecverWxid);
 	GeneralStruct pXml(xml);
 
@@ -407,12 +407,12 @@ void SendXmlCard(wchar_t* RecverWxid, wchar_t* SendWxid, wchar_t* NickName)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: wstringToString
-// º¯ÊıËµÃ÷: ½«wstring×ª³ÉString
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/9/17
-// ²Î    Êı: wstr
-// ·µ »Ø Öµ: string 
+// å‡½æ•°åç§°: wstringToString
+// å‡½æ•°è¯´æ˜: å°†wstringè½¬æˆString
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/9/17
+// å‚    æ•°: wstr
+// è¿” å› å€¼: string 
 //************************************************************
 std::string wstringToString(const std::wstring& wstr)
 {
@@ -436,12 +436,12 @@ std::string wstringToString(const std::wstring& wstr)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: GetNickNameByWxid
-// º¯ÊıËµÃ÷: ¸ù¾İºÃÓÑÁĞ±íµÄÎ¢ĞÅID/ÈºIDÀ´»ñÈ¡Î¢ĞÅêÇ³Æ/ÈºêÇ³Æ
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2020/2/10
-// ²Î    Êı: nickname êÇ³Æ
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: GetNickNameByWxid
+// å‡½æ•°è¯´æ˜: æ ¹æ®å¥½å‹åˆ—è¡¨çš„å¾®ä¿¡ID/ç¾¤IDæ¥è·å–å¾®ä¿¡æ˜µç§°/ç¾¤æ˜µç§°
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2020/2/10
+// å‚    æ•°: nickname æ˜µç§°
+// è¿” å› å€¼: void 
 //************************************************************
 wstring GetNickNameByWxid(wstring wxid)
 {
@@ -459,12 +459,12 @@ wstring GetNickNameByWxid(wstring wxid)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: GetNicknameByWxid
-// º¯ÊıËµÃ÷: ¸ù¾İÎ¢ĞÅID»ñÈ¡êÇ³Æ
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2020/2/10
-// ²Î    Êı: wxid Î¢ĞÅID
-// ·µ »Ø Öµ: wchar_t* êÇ³Æ 
+// å‡½æ•°åç§°: GetNicknameByWxid
+// å‡½æ•°è¯´æ˜: æ ¹æ®å¾®ä¿¡IDè·å–æ˜µç§°
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2020/2/10
+// å‚    æ•°: wxid å¾®ä¿¡ID
+// è¿” å› å€¼: wchar_t* æ˜µç§° 
 //************************************************************
 wchar_t* GetNicknameByWxid(wchar_t* userwxid)
 {
@@ -475,7 +475,7 @@ wchar_t* GetNicknameByWxid(wchar_t* userwxid)
 	GeneralStruct pWxid(userwxid);
 	char* asmWxid = (char*)& pWxid.pstr;
 	char buff[0x3D8] = { 0 };
-	DWORD userData = 0;		//ÓÃ»§Êı¾İµÄµØÖ·
+	DWORD userData = 0;		//ç”¨æˆ·æ•°æ®çš„åœ°å€
 	__asm
 	{
 		pushad;
@@ -493,7 +493,7 @@ wchar_t* GetNicknameByWxid(wchar_t* userwxid)
 	}
 
 	wchar_t tempnickname[100] = { 0 };
-	DWORD wxNickAdd = userData + 0x64;	//êÇ³Æ
+	DWORD wxNickAdd = userData + 0x64;	//æ˜µç§°
 	swprintf_s(tempnickname, L"%s", (wchar_t*)(*((LPVOID*)wxNickAdd)));
 
 	wchar_t* nickname = new wchar_t[100]{ 0 };

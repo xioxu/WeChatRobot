@@ -1,7 +1,6 @@
 #pragma once
 #include "stdafx.h"
 
-
-void InitWindow(HMODULE hModule);	//³õÊ¼»¯´°¿Ú
-void RegisterWindow(HMODULE hModule);		//×¢²á´°¿Ú
-LRESULT CALLBACK WndProc(HWND hWnd, UINT Message, WPARAM wParam, LPARAM lParam);	//´°¿Ú»Øµ÷
+void InitWindow(HMODULE hModule);	//åˆå§‹åŒ–çª—å£
+void RegisterWindow(HMODULE hModule);		//æ³¨å†Œçª—å£
+LRESULT CALLBACK WndProc(HWND hWnd, UINT Message, WPARAM wParam, LPARAM lParam);	//çª—å£å›è°ƒ

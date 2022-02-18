@@ -6,12 +6,12 @@
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: IsWxVersionValid
-// º¯ÊıËµÃ÷: ¼ì²éÎ¢ĞÅ°æ±¾ÊÇ·ñÆ¥Åä
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êı: void
-// ·µ »Ø Öµ: BOOL
+// å‡½æ•°åç§°: IsWxVersionValid
+// å‡½æ•°è¯´æ˜: æ£€æŸ¥å¾®ä¿¡ç‰ˆæœ¬æ˜¯å¦åŒ¹é…
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: void
+// è¿” å› å€¼: BOOL
 //************************************************************
 BOOL IsWxVersionValid()
 {
@@ -41,7 +41,7 @@ BOOL IsWxVersionValid()
 
 				int s_revision_num = pVsInfo->dwFileVersionLS & 0x0000FFFF;
 
-				//°Ñ°æ±¾±ä³É×Ö·û´®
+				//æŠŠç‰ˆæœ¬å˜æˆå­—ç¬¦ä¸²
 				strstream wxVer;
 				wxVer << s_major_ver << "." << s_minor_ver << "." << s_build_num << "." << s_revision_num;
 				wxVer >> asVer;
@@ -50,28 +50,28 @@ BOOL IsWxVersionValid()
 		delete[] pBuf;
 	}
 
-	//°æ±¾Æ¥Åä
+	//ç‰ˆæœ¬åŒ¹é…
 	if (asVer == wxVersoin)
 	{
 		return TRUE;
 	}
 
-	//°æ±¾²»Æ¥Åä
+	//ç‰ˆæœ¬ä¸åŒ¹é…
 	return FALSE;
 }
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: CheckIsLogin
-// º¯ÊıËµÃ÷: ¼ì²éÎ¢ĞÅÊÇ·ñµÇÂ½
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: CheckIsLogin
+// å‡½æ•°è¯´æ˜: æ£€æŸ¥å¾®ä¿¡æ˜¯å¦ç™»é™†
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: void
+// è¿” å› å€¼: void
 //************************************************************
 void CheckIsLogin()
 {
-	//»ñÈ¡WeChatWinµÄ»ùÖ·
+	//è·å–WeChatWinçš„åŸºå€
 	DWORD  dwWeChatWinAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll");
 
 	while (true)
@@ -79,18 +79,18 @@ void CheckIsLogin()
 		DWORD dwIsLogin = dwWeChatWinAddr + LoginSign_Offset;
 		if (*(DWORD*)dwIsLogin != 0)
 		{
-			//²éÕÒµÇÂ½´°¿Ú¾ä±ú
+			//æŸ¥æ‰¾ç™»é™†çª—å£å¥æŸ„
 			HWND hLogin = FindWindow(NULL, L"Login");
 			if (hLogin == NULL)
 			{
-				OutputDebugStringA("Î´²éÕÒµ½Login´°¿Ú");
-				return;
+				OutputDebugStringA("æœªæŸ¥æ‰¾åˆ°Loginçª—å£");
+			    return;
 			}
 			COPYDATASTRUCT login_msg;
 			login_msg.dwData = WM_Login;
 			login_msg.lpData = NULL;
 			login_msg.cbData = 0;
-			//·¢ËÍÏûÏ¢¸ø¿ØÖÆ¶Ë
+			//å‘é€æ¶ˆæ¯ç»™æ§åˆ¶ç«¯
 			SendMessage(hLogin, WM_COPYDATA, (WPARAM)hLogin, (LPARAM)&login_msg);
 			break;
 		}

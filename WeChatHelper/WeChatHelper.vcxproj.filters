@@ -64,6 +64,9 @@
     <Filter Include="功能窗口\功能窗口">
       <UniqueIdentifier>{60dea528-288d-4c73-9274-bc0b03f2f4f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Websocket">
+      <UniqueIdentifier>{5fa53462-85a5-4b4a-a382-b14062bd2897}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -114,6 +117,42 @@
     <ClInclude Include="Function.h">
       <Filter>功能窗口\功能窗口</Filter>
     </ClInclude>
+    <ClInclude Include="lib_json\json_tool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\allocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\assertions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\forwards.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_features.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\value.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="easywsclient.hpp">
+      <Filter>Websocket</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -158,5 +197,22 @@
     <ClCompile Include="Function.cpp">
       <Filter>功能窗口\功能窗口</Filter>
     </ClCompile>
+    <ClCompile Include="lib_json\json_reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib_json\json_value.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib_json\json_writer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="easywsclient.cpp">
+      <Filter>Websocket</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib_json\json_valueiterator.inl">
+      <Filter>头文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

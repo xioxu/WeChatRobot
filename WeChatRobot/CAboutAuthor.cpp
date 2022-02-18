@@ -1,4 +1,4 @@
-﻿// CAboutAuthor.cpp: 实现文件
+// CAboutAuthor.cpp: 实现文件
 //
 
 #include "stdafx.h"
@@ -49,7 +49,7 @@ BOOL CAboutAuthor::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	m_kanxue = L"鬼手56";
+	m_kanxue = L"鬼手56--!!!";
 	m_wuaipojie = L"鬼手56";
 	m_github = L"https://github.com/TonyChen56";
 	m_csdn = L"https://blog.csdn.net/qq_38474570";

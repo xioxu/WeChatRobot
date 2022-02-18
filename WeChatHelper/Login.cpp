@@ -2,17 +2,17 @@
 #include "Login.h"
 
 
-DWORD dwRetAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxQrCodeOffset + 5;	//·µ»ØµØÖ·
-DWORD dwOverAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxQrCodeOffsetCall;	//¸²¸ÇµÄcall
+DWORD dwRetAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxQrCodeOffset + 5;	//è¿”å›åœ°å€
+DWORD dwOverAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll") + WxQrCodeOffsetCall;	//è¦†ç›–çš„call
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: HookQrCode
-// º¯ÊıËµÃ÷: HOOKÎ¢ĞÅ¶şÎ¬Âë
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êı: DWORD dwHookOffset ÒªhookµÄÆ«ÒÆ 
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: HookQrCode
+// å‡½æ•°è¯´æ˜: HOOKå¾®ä¿¡äºŒç»´ç 
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: DWORD dwHookOffset è¦hookçš„åç§» 
+// è¿” å› å€¼: void
 //************************************************************
 void HookQrCode()
 {
@@ -21,12 +21,12 @@ void HookQrCode()
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: ShowPic
-// º¯ÊıËµÃ÷: ÏÔÊ¾¶şÎ¬Âë
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/16
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: ShowPic
+// å‡½æ•°è¯´æ˜: æ˜¾ç¤ºäºŒç»´ç 
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/16
+// å‚    æ•°: void
+// è¿” å› å€¼: void
 //************************************************************
 void  __declspec(naked) ShowPic()
 {
@@ -45,19 +45,19 @@ void  __declspec(naked) ShowPic()
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: SaveImg
-// º¯ÊıËµÃ÷: ±£´æ¶şÎ¬ÂëÍ¼Æ¬
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êı: DWORD qrcode ¶şÎ¬ÂëÍ¼Æ¬ËùÔÚµÄµØÖ·
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: SaveImg
+// å‡½æ•°è¯´æ˜: ä¿å­˜äºŒç»´ç å›¾ç‰‡
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: DWORD qrcode äºŒç»´ç å›¾ç‰‡æ‰€åœ¨çš„åœ°å€
+// è¿” å› å€¼: void
 //************************************************************
 void __stdcall SaveImg(DWORD qrcode)
 {
-	//»ñÈ¡Í¼Æ¬³¤¶È
+	//è·å–å›¾ç‰‡é•¿åº¦
 	DWORD dwPicLen = qrcode + 0x4;
 	size_t cpyLen = (size_t)*((LPVOID*)dwPicLen);
-	//¿½±´Í¼Æ¬µÄÊı¾İ
+	//æ‹·è´å›¾ç‰‡çš„æ•°æ®
 	char PicData[0xFFF] = { 0 };
 	memcpy(PicData, *((LPVOID*)qrcode), cpyLen);
 
@@ -66,18 +66,18 @@ void __stdcall SaveImg(DWORD qrcode)
 	GetTempPathA(MAX_PATH, szTempPath);
 
 	sprintf_s(szPicturePath, "%s%s", szTempPath, "qrcode.png");
-	//½«ÎÄ¼şĞ´µ½TempÄ¿Â¼ÏÂ
+	//å°†æ–‡ä»¶å†™åˆ°Tempç›®å½•ä¸‹
 	HANDLE hFile = CreateFileA(szPicturePath, GENERIC_ALL, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hFile == NULL)
 	{
-		OutputDebugStringA("´´½¨Í¼Æ¬ÎÄ¼şÊ§°Ü");
+		OutputDebugStringA("åˆ›å»ºå›¾ç‰‡æ–‡ä»¶å¤±è´¥"); 
 		return;
 	}
 
 	DWORD dwRead = 0;
 	if (WriteFile(hFile, PicData, cpyLen, &dwRead, NULL) == 0)
 	{
-		OutputDebugStringA("Ğ´ÈëÍ¼Æ¬ÎÄ¼şÊ§°Ü");
+		OutputDebugStringA("å†™å…¥å›¾ç‰‡æ–‡ä»¶å¤±è´¥");
 		return;
 	}
 	CloseHandle(hFile);
@@ -86,12 +86,12 @@ void __stdcall SaveImg(DWORD qrcode)
 
 
 //************************************************************
-// º¯ÊıÃû³Æ: GotoQrCode
-// º¯ÊıËµÃ÷: Ìø×ªµ½¶şÎ¬Âë´°¿Ú
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/16
-// ²Î    Êı: void
-// ·µ »Ø Öµ: void
+// å‡½æ•°åç§°: GotoQrCode
+// å‡½æ•°è¯´æ˜: è·³è½¬åˆ°äºŒç»´ç çª—å£
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/16
+// å‚    æ•°: void
+// è¿” å› å€¼: void
 //************************************************************
 void GotoQrCode()
 {

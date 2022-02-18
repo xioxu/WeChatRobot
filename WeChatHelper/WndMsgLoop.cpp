@@ -10,90 +10,95 @@
 #include "CAutoFunction.h"
 #include "SelfInformation.h"
 #include <stdio.h>
+#include "CPublic.h"
 
-extern BOOL g_AutoChat;					//×Ô¶¯ÁÄÌì
+extern BOOL g_AutoChat;					//è‡ªåŠ¨èŠå¤©
 
 
 
 //************************************************************
-// º¯ÊýÃû³Æ: RegisterWindow
-// º¯ÊýËµÃ÷: ³õÊ¼»¯´°¿Ú 
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êý: HMODULE hModule ¾ä±ú
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: RegisterWindow
+// å‡½æ•°è¯´æ˜Ž: åˆå§‹åŒ–çª—å£ 
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: HMODULE hModule å¥æŸ„
+// è¿” å›ž å€¼: void 
 //************************************************************
 void InitWindow(HMODULE hModule)
 {
-	//¼ì²éµ±Ç°Î¢ÐÅ°æ±¾
+	//æ£€æŸ¥å½“å‰å¾®ä¿¡ç‰ˆæœ¬
 	if (IsWxVersionValid())
 	{
-		//»ñÈ¡WeChatWinµÄ»ùÖ·
+		//èŽ·å–WeChatWinçš„åŸºå€
 		DWORD dwWeChatWinAddr = (DWORD)GetModuleHandle(L"WeChatWin.dll");
 	
-		//¼ì²âÎ¢ÐÅÊÇ·ñµÇÂ½
+		//æ£€æµ‹å¾®ä¿¡æ˜¯å¦ç™»é™†
 		DWORD dwIsLogin = dwWeChatWinAddr + LoginSign_Offset;
-		if (*(DWORD*)dwIsLogin == 0)	//µÈÓÚ0ËµÃ÷Î¢ÐÅÎ´µÇÂ¼
+		if (*(DWORD*)dwIsLogin == 0)	//ç­‰äºŽ0è¯´æ˜Žå¾®ä¿¡æœªç™»å½•
 		{
-			//¿ªÏß³Ì³ÖÐø¼ì²âÎ¢ÐÅµÇÂ½×´Ì¬
+			//å¼€çº¿ç¨‹æŒç»­æ£€æµ‹å¾®ä¿¡ç™»é™†çŠ¶æ€
 			HANDLE hThread= CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)CheckIsLogin, 0, 0, NULL);
 			CloseHandle(hThread);
 
-			//HOOK»ñÈ¡ºÃÓÑÁÐ±íµÄcall
+			//HOOKèŽ·å–å¥½å‹åˆ—è¡¨çš„call
+
+			OutputDebugStringA("Begince retrive friend list");
 			HookGetFriendList();
 			
-			//HOOK½ÓÊÕÏûÏ¢
+			//HOOKæŽ¥æ”¶æ¶ˆæ¯
 			HookChatRecord();
 			
-			//·À³·»Ø
-			AntiRevoke();
+			//é˜²æ’¤å›ž
+			//AntiRevoke();   //remove by nxu
 			
-			//HOOKÌáÈ¡±íÇé 
+			//HOOKæå–è¡¨æƒ… 
 			//HookExtractExpression();
 
-			//×¢²á´°¿Ú
+			ConnWS();
+
+			//æ³¨å†Œçª—å£
 			RegisterWindow(hModule);
 		}
 		else
 		{
-			//Èç¹ûÎ¢ÐÅÒÑ¾­µÇÂ½ ·¢ËÍÏûÏ¢¸ø¿Í»§¶Ë
+			//å¦‚æžœå¾®ä¿¡å·²ç»ç™»é™† å‘é€æ¶ˆæ¯ç»™å®¢æˆ·ç«¯
 			HWND hLogin = FindWindow(NULL, L"Login");
 			if (hLogin == NULL)
 			{
-				OutputDebugStringA("Î´²éÕÒµ½Login´°¿Ú");
+				OutputDebugStringA("æœªæŸ¥æ‰¾åˆ°Loginçª—å£");
 				return;
 			}
 			COPYDATASTRUCT login_msg;
 			login_msg.dwData = WM_AlreadyLogin;
 			login_msg.lpData = NULL;
 			login_msg.cbData = 0;
-			//·¢ËÍÏûÏ¢¸ø¿ØÖÆ¶Ë
+			//å‘é€æ¶ˆæ¯ç»™æŽ§åˆ¶ç«¯
 			SendMessage(hLogin, WM_COPYDATA, (WPARAM)hLogin, (LPARAM)&login_msg);
 		}
 	}
 	else
 	{
-		MessageBoxA(NULL, "µ±Ç°Î¢ÐÅ°æ±¾²»Æ¥Åä£¬ÇëÏÂÔØWeChat 3.2.1.154", "´íÎó", MB_OK);
+		MessageBoxA(NULL, "å½“å‰å¾®ä¿¡ç‰ˆæœ¬ä¸åŒ¹é…ï¼Œè¯·ä¸‹è½½WeChat 3.2.1.154", "é”™è¯¯", MB_OK);
 	}
 
 }
 
 
 //************************************************************
-// º¯ÊýÃû³Æ: RegisterWindow
-// º¯ÊýËµÃ÷: ×¢²á´°¿Ú
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êý: HMODULE hModule ´°¿Ú¾ä±ú
-// ·µ »Ø Öµ: void 
+// å‡½æ•°åç§°: RegisterWindow
+// å‡½æ•°è¯´æ˜Ž: æ³¨å†Œçª—å£
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: HMODULE hModule çª—å£å¥æŸ„
+// è¿” å›ž å€¼: void 
 //************************************************************
 
 void RegisterWindow(HMODULE hModule)
 {
-	//1  Éè¼ÆÒ»¸ö´°¿ÚÀà
+	//1  è®¾è®¡ä¸€ä¸ªçª—å£ç±»
 	WNDCLASS wnd;
-	wnd.style = CS_VREDRAW | CS_HREDRAW;//·ç¸ñ
-	wnd.lpfnWndProc = WndProc;//´°¿Ú»Øµ÷º¯ÊýÖ¸Õë.
+	wnd.style = CS_VREDRAW | CS_HREDRAW;//é£Žæ ¼
+	wnd.lpfnWndProc = WndProc;//çª—å£å›žè°ƒå‡½æ•°æŒ‡é’ˆ.
 	wnd.cbClsExtra = NULL;
 	wnd.cbWndExtra = NULL;
 	wnd.hInstance = hModule;
@@ -102,164 +107,164 @@ void RegisterWindow(HMODULE hModule)
 	wnd.hbrBackground = (HBRUSH)COLOR_WINDOW;
 	wnd.lpszMenuName = NULL;
 	wnd.lpszClassName = TEXT("WeChatHelper");
-	//2  ×¢²á´°¿ÚÀà
+	//2  æ³¨å†Œçª—å£ç±»
 	RegisterClass(&wnd);
-	//3  ´´½¨´°¿Ú
+	//3  åˆ›å»ºçª—å£
 	HWND hWnd = CreateWindow(
-		TEXT("WeChatHelper"),  //´°¿ÚÀàÃû
-		TEXT("WeChatHelper"),//´°¿ÚÃû
-		WS_OVERLAPPEDWINDOW,//´°¿Ú·ç¸ñ
-		10, 10, 500, 300, //´°¿ÚÎ»ÖÃ
-		NULL,             //¸¸´°¿Ú¾ä±ú
-		NULL,             //²Ëµ¥¾ä±ú
-		hModule,        //ÊµÀý¾ä±ú
-		NULL              //´«µÝWM_CREATEÏûÏ¢Ê±µÄ¸½¼Ó²ÎÊý
+		TEXT("WeChatHelper"),  //çª—å£ç±»å
+		TEXT("WeChatHelper"),//çª—å£å
+		WS_OVERLAPPEDWINDOW,//çª—å£é£Žæ ¼
+		10, 10, 500, 300, //çª—å£ä½ç½®
+		NULL,             //çˆ¶çª—å£å¥æŸ„
+		NULL,             //èœå•å¥æŸ„
+		hModule,        //å®žä¾‹å¥æŸ„
+		NULL              //ä¼ é€’WM_CREATEæ¶ˆæ¯æ—¶çš„é™„åŠ å‚æ•°
 	);
-	//4  ¸üÐÂÏÔÊ¾´°¿Ú
+	//4  æ›´æ–°æ˜¾ç¤ºçª—å£
 	ShowWindow(hWnd, SW_HIDE);
 	UpdateWindow(hWnd);
-	//5  ÏûÏ¢Ñ­»·£¨ÏûÏ¢±Ã£©
+	//5  æ¶ˆæ¯å¾ªçŽ¯ï¼ˆæ¶ˆæ¯æ³µï¼‰
 	MSG  msg = {};
-	//   5.1»ñÈ¡ÏûÏ¢
+	//   5.1èŽ·å–æ¶ˆæ¯
 	while (GetMessage(&msg, 0, 0, 0))
 	{
-		//   5.2·­ÒëÏûÏ¢
+		//   5.2ç¿»è¯‘æ¶ˆæ¯
 		TranslateMessage(&msg);
-		//   5.3×ª·¢µ½ÏûÏ¢»Øµ÷º¯Êý
+		//   5.3è½¬å‘åˆ°æ¶ˆæ¯å›žè°ƒå‡½æ•°
 		DispatchMessage(&msg);
 	}
 }
 
 
 //************************************************************
-// º¯ÊýÃû³Æ: WndProc
-// º¯ÊýËµÃ÷: »Øµ÷º¯Êý ÓÃÓÚºÍ¿ØÖÆ¶ËÍ¨ÐÅ 
-// ×÷    Õß: GuiShou
-// Ê±    ¼ä: 2019/6/30
-// ²Î    Êý: HWND hWnd,UINT Message,WPARAM wParam,LPARAM lParam
-// ·µ »Ø Öµ: LRESULT 
+// å‡½æ•°åç§°: WndProc
+// å‡½æ•°è¯´æ˜Ž: å›žè°ƒå‡½æ•° ç”¨äºŽå’ŒæŽ§åˆ¶ç«¯é€šä¿¡ 
+// ä½œ    è€…: GuiShou
+// æ—¶    é—´: 2019/6/30
+// å‚    æ•°: HWND hWnd,UINT Message,WPARAM wParam,LPARAM lParam
+// è¿” å›ž å€¼: LRESULT 
 //************************************************************
 LRESULT CALLBACK WndProc(HWND hWnd, UINT Message, WPARAM wParam, LPARAM lParam)
 {
 	if (Message == WM_COPYDATA)
 	{
 		COPYDATASTRUCT *pCopyData = (COPYDATASTRUCT*)lParam;
-		//½ÓÊÕÍ¨ÓÃÏûÏ¢½á¹¹Ìå
+		//æŽ¥æ”¶é€šç”¨æ¶ˆæ¯ç»“æž„ä½“
 		MessageUnion *msg = (MessageUnion*)pCopyData->lpData;
 		switch (pCopyData->dwData)
 		{
-		//ÏÔÊ¾¶þÎ¬Âë
+		//æ˜¾ç¤ºäºŒç»´ç 
 		case WM_ShowQrPicture:
 		{
 			GotoQrCode();
 			HookQrCode();
 		}
 		break;
-		//ÍË³öÎ¢ÐÅ
+		//é€€å‡ºå¾®ä¿¡
 		case WM_Logout:
 		{
 			LogoutWeChat();
 		}
 		break;
-		//·¢ËÍÎÄ±¾ÏûÏ¢
+		//å‘é€æ–‡æœ¬æ¶ˆæ¯
 		case WM_SendTextMessage:
 		{
 			SendTextMessage(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 			
 		}
 		break;
-		//·¢ËÍÎÄ¼þÏûÏ¢
+		//å‘é€æ–‡ä»¶æ¶ˆæ¯
 		case WM_SendFileMessage:
 		{
 			SendFileMessage(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 		}
 		break;
-		//·¢ËÍÍ¼Æ¬ÏûÏ¢
+		//å‘é€å›¾ç‰‡æ¶ˆæ¯
 		case WM_SendImageMessage:
 		{
 			SendImageMessage(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 		}
 		break;
-		//»ñÈ¡¸öÈËÐÅÏ¢
+		//èŽ·å–ä¸ªäººä¿¡æ¯
 		case WM_GetInformation:
 		{
 			GetInformation();
 		}
 		break;
-		//·¢ËÍÈº¹«¸æ
+		//å‘é€ç¾¤å…¬å‘Š
 		case WM_SetRoomAnnouncement:
 		{
 			SetWxRoomAnnouncement(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 		}
 		break;
-		//É¾³ýºÃÓÑ
+		//åˆ é™¤å¥½å‹
 		case WM_DeleteUser:
 		{
 			DeleteUser((wchar_t*)pCopyData->lpData);
 		}
 		break;
-		//ÍË³öÈºÁÄ
+		//é€€å‡ºç¾¤èŠ
 		case WM_QuitChatRoom:
 		{
 			QuitChatRoom((wchar_t*)pCopyData->lpData);
 		}
 		break;
-		//Ìí¼ÓÈº³ÉÔ±
+		//æ·»åŠ ç¾¤æˆå‘˜
 		case WM_AddGroupMember:
 		{
 			AddGroupMember(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 		}
 		break;
-		//·¢ËÍÃûÆ¬
+		//å‘é€åç‰‡
 		case WM_SendXmlCard:
 		{
 			SendXmlCard(msg->xmlcardmsg.RecverWxid, msg->xmlcardmsg.SendWxid, msg->xmlcardmsg.NickName);
 		}
 		break;
-		//ÏÔÊ¾Èº³ÉÔ±
+		//æ˜¾ç¤ºç¾¤æˆå‘˜
 		case WM_ShowChatRoomMembers:
 		{
 			ShowChatRoomUser((wchar_t*)pCopyData->lpData);
 		}
 		break;
-		//Ìí¼ÓºÃÓÑ
+		//æ·»åŠ å¥½å‹
 		case WM_AddUser:
 		{
 			AddWxUser(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 		}
 		break;
-		//ÐÞ¸ÄÈºÃû³Æ
+		//ä¿®æ”¹ç¾¤åç§°
 		case WM_SetRoomName:
 		{
 			SetRoomName(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 
 		}
 		break;
-		//×Ô¶¯ÁÄÌì
+		//è‡ªåŠ¨èŠå¤©
 		case WM_AutoChat:
 		{
 			g_AutoChat = TRUE;
 		}
 		break;
-		//È¡Ïû×Ô¶¯ÁÄÌì
+		//å–æ¶ˆè‡ªåŠ¨èŠå¤©
 		case WM_CancleAutoChat:
 		{
 			g_AutoChat = FALSE;
 		}
 		break;
-		//·¢ËÍ°¬ÌØÏûÏ¢
+		//å‘é€è‰¾ç‰¹æ¶ˆæ¯
 		case WM_SendAtMsg:
 		{
 			SendRoomAtMsg(msg->atmsg.chatroomid, msg->atmsg.membermsgdata1, msg->atmsg.membernickname, msg->atmsg.msgmsgdata2);
 		}
 		break;
-		//É¾³ýÈº³ÉÔ±
+		//åˆ é™¤ç¾¤æˆå‘˜
 		case WM_DelRoomMember:
 		{
 			DelRoomMember(msg->genericmsg.msgdata1, msg->genericmsg.msgdata2);
 		}
 		break;
-		//´ò¿ªURL
+		//æ‰“å¼€URL
 		case WM_OpenUrl:
 		{
 			OpenUrl((wchar_t*)pCopyData->lpData);
